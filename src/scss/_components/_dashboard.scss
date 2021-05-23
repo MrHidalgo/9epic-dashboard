@@ -1,0 +1,142 @@
+// SECTION :: START
+
+.dashboard {
+	position: relative;
+
+	&__wrapper {
+		display: flex;
+		min-height: 100vh;
+		padding-top: 180px;
+		padding-left: 110px;
+		padding-right: 30px;
+	}
+
+	&__sidebar {
+		z-index: 100;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		width: 80px;
+		height: 100%;
+		border-radius: 0;
+		box-shadow: 10px 0px 50px rgba(18, 30, 49, 0);
+		background: linear-gradient(179.92deg, #4097D9 -23.94%, #30C4A0 53.12%, #00B94F 120.74%);
+		@include transition(width, border-radius, box-shadow);
+
+		&.is-open {
+			width: 400px;
+			border-radius: 0 40px 40px 0;
+			box-shadow: 10px 0px 50px rgba(18, 30, 49, 0.2);
+			@include transition(width, border-radius, box-shadow);
+
+			.dashboard__sidebar-btn-describe {
+				display: block;
+			}
+		}
+
+		&-top {
+			display: flex;
+			align-items: center;
+			height: 100px;
+			padding: 15px;
+		}
+
+		&-bottom {
+			overflow-y: auto;
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			min-height: 1px;
+			max-height: 100%;
+			padding-left: 15px;
+		}
+
+		&-btn {
+			position: relative;
+			display: flex;
+			margin-bottom: 50px;
+
+			&-circle {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				border: 2px solid #FFFFFF;
+
+				.icon-font {
+					color: #ffffff;
+					font-size: 20px;
+
+					&.icon-account-framework,
+					&.icon-identity-access,
+					&.icon-monitoring,
+					&.icon-data-protection,
+					&.icon-digital {
+						font-size: 16px;
+					}
+				}
+			}
+
+			&-describe {
+				white-space: nowrap;
+				display: none;
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+				padding-top: 12px;
+				padding-left: 20px;
+
+				p {
+					padding-bottom: 10px;
+					font-weight: 600;
+					font-size: 20px;
+					line-height: 24px;
+					color: #FFFFFF;
+				}
+
+				button {
+					outline: none;
+					cursor: pointer;
+					display: flex;
+					padding: 0;
+					margin: 0;
+					border: none;
+					box-shadow: none;
+					border-radius: 0;
+					background-color: transparent;
+					padding-bottom: 10px;
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 17px;
+					color: rgba(#FFFFFF, 0.5);
+				}
+			}
+		}
+	}
+
+	&__header {
+		z-index: 99;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px 30px 40px 110px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 20px;
+			left: 110px;
+			width: calc(100% - 140px);
+			height: 1px;
+			background-color: rgba(#121E31, 0.1);
+		}
+	}
+}
+
+// SECTION :: END

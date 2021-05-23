@@ -1,0 +1,107 @@
+@font-face {
+	font-family: "iconFont";
+	src: url('../fonts/iconFont.eot');
+	src: url('../fonts/iconFont.eot?#iefix') format('eot'),
+		url('../fonts/iconFont.woff2') format('woff2'),
+		url('../fonts/iconFont.woff') format('woff'),
+		url('../fonts/iconFont.ttf') format('truetype'),
+		url('../fonts/iconFont.svg#iconFont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "iconFont", sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == account-framework {
+		$char: "\E001";
+	}
+	@if $filename == data-protection {
+		$char: "\E002";
+	}
+	@if $filename == digital {
+		$char: "\E003";
+	}
+	@if $filename == governance {
+		$char: "\E004";
+	}
+	@if $filename == identity-access {
+		$char: "\E005";
+	}
+	@if $filename == infrastructure {
+		$char: "\E006";
+	}
+	@if $filename == monitoring {
+		$char: "\E007";
+	}
+	@if $filename == network {
+		$char: "\E008";
+	}
+	@if $filename == security {
+		$char: "\E009";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-account-framework {
+	@include icon(account-framework);
+
+}
+.icon-data-protection {
+	@include icon(data-protection);
+
+}
+.icon-digital {
+	@include icon(digital);
+
+}
+.icon-governance {
+	@include icon(governance);
+
+}
+.icon-identity-access {
+	@include icon(identity-access);
+
+}
+.icon-infrastructure {
+	@include icon(infrastructure);
+
+}
+.icon-monitoring {
+	@include icon(monitoring);
+
+}
+.icon-network {
+	@include icon(network);
+
+}
+.icon-security {
+	@include icon(security);
+
+}
