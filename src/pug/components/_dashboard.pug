@@ -7,4 +7,425 @@ section#dashboard.dashboard
     include _dashboard-sidebar
     include _dashboard-header
 
+    .dashboard__block-wrapper
+      div
+        .dashboard__block-row
+          div
+            .dashboard__block
+              .dashboard__block-header
+                div
+                  p Account Framework
+                div
+                  span.success
+                    i.icon-font.icon-checked
+              .dashboard__block-body
+                .dashboard__box
+                  .dashboard__box-body
+                    ul
+                      li
+                        a.green(href="#") 7
+                        p Accounts
+                      li.empty
+                      li
+                        a.green(href="#") 4
+                        p OUs
+          div
+            .dashboard__block
+              .dashboard__block-header
+                div
+                  p Identity & Access
+                div
+                  span.success
+                    i.icon-font.icon-checked
+              .dashboard__block-body
+                .dashboard__box
+                  .dashboard__box-body
+                    ul
+                      li
+                        a.gold(href="#") 8
+                        p IdPs
+                      li.empty
+                      li
+                        a.red(href="#") 653
+                        p Roles
+      div
+        .dashboard__block
+          .dashboard__block-header
+            div
+              p Network
+            div
+              span.refresh
+                i.icon-font.icon-refresh
+          .dashboard__block-body
+            .dashboard__box
+              .dashboard__box-header
+                p Virtual Private Network
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 60
+                    p VPCs
+                  li.empty
+                  li
+                    a.orange(href="#") 169
+                    p Subnets
+                  li.empty
+                  li
+                    a.orange(href="#") 114
+                    p Route Tables
+                  li.empty
+                  li
+                    a.green(href="#") 201
+                    p!= "DHCP <br>OptionSets"
+                  li.empty
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p!= "VPC <br>Endpoints"
+            .dashboard__box
+              .dashboard__box-header
+                p Transit Network
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 60
+                    p!= "Transit <br>Gateway"
+                  li.empty
+                  li
+                    a.orange(href="#") 169
+                    p!= "TGW <br>RouteTables"
+                  li.empty
+                  li
+                    a.red(href="#") 114
+                    p!= "TGW <br>Attachments"
+            .dashboard__box
+              .dashboard__box-header
+                p Hybrid Network
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 4
+                    p!= "VPN <br>Connections"
+                  li.empty
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p!= "DCX <br>Connections"
+                  li.empty
+                  li
+                    a.red(href="#") 1
+                    p DGWs
+            .dashboard__box
+              .dashboard__box-header
+                p Traffic Mirroring
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 34
+                    p!= "Mirror <br>Targets"
+                  li.empty
+                  li
+                    a.green(href="#") 12
+                    p!= "Resource <br>Shares"
+      div
+        .dashboard__block
+          .dashboard__block-header
+            div
+              p Secutiry
+            div
+              span.refresh
+                i.icon-font.icon-refresh
+          .dashboard__block-body
+            .dashboard__box
+              .dashboard__box-header
+                p Compliance Mgmt.
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 7
+                    p!= "SecHub <br>Members"
+                  li.empty
+                  li
+                    a.orange(href="#") 9
+                    p!= "SecHub <br>Standards"
+                  li.empty
+                  li
+                    a.orange(href="#") 6
+                    p!= "SecHub <br>Integrations"
+            .dashboard__box
+              .dashboard__box-header
+                p Threat Detection
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 10
+                    p!= "GuardDuty <br>Members"
+            .dashboard__box
+              .dashboard__box-header
+                p Secrets Mgmt.
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 4
+                    p!= "Secrets"
+            .dashboard__box
+              .dashboard__box-header
+                p Perimeter Protection
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 4
+                    p!= "FMS <br>Policies"
+                  li.empty
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p!= "FMS <br>AppLists"
+                  li.empty
+                  li
+                    a.red(href="#") 1
+                    p!= "FMS <br>Protocol List"
+      div
+        .dashboard__block
+          .dashboard__block-header
+            div
+              p Infrastructure
+            div
+              span.decline
+                i.icon-font.icon-close
+          .dashboard__block-body
+            .dashboard__box
+              .dashboard__box-header
+                p Active Directory
+              .dashboard__box-body
+                ul
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p Directories
+            .dashboard__box
+              .dashboard__box-header
+                p Private DNS
+              .dashboard__box-body
+                ul
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p!= "Inbound <br>Endpoints"
+                  li.empty
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p!= "Outbound <br>Endpoints"
+                  li.empty
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p!= "Resolver <br>Rules"
+            .dashboard__box
+              .dashboard__box-header
+                p Image Management
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 24
+                    p Components
+                  li.empty
+                  li
+                    a.orange(href="#") 2
+                    p Recipes
+                  li.empty
+                  li
+                    a.orange(href="#") 2
+                    p Pipelines
+                  li.empty
+                  li
+                    a.green(href="#") 2
+                    p Images
+            .dashboard__box
+              .dashboard__box-header
+                p Patch Management
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 4
+                    p Baselines
+                  li.empty
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p Patch Groups
+                  li.empty
+                  li
+                    a.red(href="#") 20
+                    p!= "Maintenance <br>Windows"
+            .dashboard__box
+              .dashboard__box-header
+                p Workspaces
+              .dashboard__box-body
+                ul
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p Workspaces
+      div
+        .dashboard__block
+          .dashboard__block-header
+            div
+              p Governance
+            div
+              span.refresh
+                i.icon-font.icon-refresh
+          .dashboard__block-body
+            .dashboard__box
+              .dashboard__box-header
+                p Organization Policies
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 60
+                    p SCPs
+                  li.empty
+                  li
+                    a.orange(href="#") 169
+                    p Tag Policies
+                  li.empty
+                  li
+                    a.orange(href="#") 114
+                    p Backup Policies
+            .dashboard__box
+              .dashboard__box-header
+                p Config
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 128
+                    p Recorders
+                  li.empty
+                  li
+                    a.orange(href="#") 990
+                    p Rules
+            .dashboard__box
+              .dashboard__box-header
+                p Workspaces
+              .dashboard__box-body
+                ul
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p Workspaces
+            .dashboard__box
+              .dashboard__box-header
+                p Service Catalog
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 2
+                    p Portfolios
+                  li.empty
+                  li
+                    a.orange(href="#") 8
+                    p Products
+      div
+        .dashboard__block
+          .dashboard__block-header
+            div
+              p Monitoring
+            div
+              span.refresh
+                i.icon-font.icon-refresh
+          .dashboard__block-body
+            .dashboard__box
+              .dashboard__box-header
+                p CloudWatch
+              .dashboard__box-body
+                ul
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p Events
+            .dashboard__box
+              .dashboard__box-header
+                p Centralized Logging
+              .dashboard__box-body
+                ul
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p S3 Buckets
+            .dashboard__box
+              .dashboard__box-header
+                p Log Analytics
+              .dashboard__box-body
+                ul
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p!= "Firehose <br>Delivery Streams"
+                  li.empty
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p ALBs
+                  li.empty
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p!= "ALB <br>Target Groups"
+      div
+        .dashboard__block
+          .dashboard__block-header
+            div
+              p Data Protection
+            div
+              span.decline
+                i.icon-font.icon-close
+          .dashboard__block-body
+            .dashboard__box
+              .dashboard__box-header
+                p Backup
+              .dashboard__box-body
+                ul
+                  li
+                    a.green(href="#") 24
+                    p Policies
+                  li.empty
+                  li
+                    a.orange(href="#") 2
+                    p Vaults
+                  li.empty
+                  li
+                    a.orange(href="#") 2
+                    p Plans
+                  li.empty
+                  li
+                    a.green(href="#") 2
+                    p Backup Jobs
+                  li.empty
+                  li
+                    a.green(href="#") 2
+                    p Copy Jobs
+            .dashboard__box
+              .dashboard__box-header
+                p Certificate Mgmt.
+              .dashboard__box-body
+                ul
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p ACM Certificates
+            .dashboard__box
+              .dashboard__box-header
+                p Key Management
+              .dashboard__box-body
+                ul
+                  li
+                    a.gold(href="#") 4
+                    p Key Stores
+                  li.empty
+                  li
+                    span.refresh
+                      i.icon-font.icon-refresh
+                    p Keys
+
 // SECTION :: END

@@ -30,53 +30,62 @@
 	@if $filename == account-framework {
 		$char: "\E001";
 	}
-	@if $filename == corner {
+	@if $filename == checked {
 		$char: "\E002";
 	}
-	@if $filename == data-protection {
+	@if $filename == close {
 		$char: "\E003";
 	}
-	@if $filename == digital {
+	@if $filename == corner {
 		$char: "\E004";
 	}
-	@if $filename == exit {
+	@if $filename == data-protection {
 		$char: "\E005";
 	}
-	@if $filename == governance {
+	@if $filename == digital {
 		$char: "\E006";
 	}
-	@if $filename == identity-access {
+	@if $filename == exit {
 		$char: "\E007";
 	}
-	@if $filename == infrastructure {
+	@if $filename == governance {
 		$char: "\E008";
 	}
-	@if $filename == monitoring {
+	@if $filename == identity-access {
 		$char: "\E009";
 	}
-	@if $filename == network {
+	@if $filename == infrastructure {
 		$char: "\E00A";
 	}
-	@if $filename == notification {
+	@if $filename == monitoring {
 		$char: "\E00B";
 	}
-	@if $filename == play {
+	@if $filename == network {
 		$char: "\E00C";
 	}
-	@if $filename == profile {
+	@if $filename == notification {
 		$char: "\E00D";
 	}
-	@if $filename == save {
+	@if $filename == play {
 		$char: "\E00E";
 	}
-	@if $filename == security {
+	@if $filename == profile {
 		$char: "\E00F";
 	}
-	@if $filename == setting {
+	@if $filename == refresh {
 		$char: "\E010";
 	}
-	@if $filename == sort {
+	@if $filename == save {
 		$char: "\E011";
+	}
+	@if $filename == security {
+		$char: "\E012";
+	}
+	@if $filename == setting {
+		$char: "\E013";
+	}
+	@if $filename == sort {
+		$char: "\E014";
 	}
 
 	@return $char;
@@ -95,6 +104,14 @@
 
 .icon-account-framework {
 	@include icon(account-framework);
+
+}
+.icon-checked {
+	@include icon(checked);
+
+}
+.icon-close {
+	@include icon(close);
 
 }
 .icon-corner {
@@ -143,6 +160,10 @@
 }
 .icon-profile {
 	@include icon(profile);
+
+}
+.icon-refresh {
+	@include icon(refresh);
 
 }
 .icon-save {
