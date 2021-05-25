@@ -1,0 +1,87 @@
+.dashboard__sidebar(menu-js)
+  .dashboard__sidebar-top
+
+    div
+      +hamburger
+    div
+      .dashboard__logo
+        a(href="#")
+          img(src="img/logo.svg" alt="")
+
+  .dashboard__sidebar-bottom
+
+    a.dashboard__sidebar-btn(href="#")
+      .dashboard__sidebar-btn-circle.c-popper
+        i.icon-font.icon-account-framework
+        .c-poppertext.c-poppertext--info
+          u
+            span!= "Account <br>Framework"
+      .dashboard__sidebar-btn-describe
+        p Account Framework
+    a.dashboard__sidebar-btn(href="#")
+      .dashboard__sidebar-btn-circle.c-popper
+        i.icon-font.icon-identity-access
+        .c-poppertext.c-poppertext--info
+          u
+            span!= "Identity <br>& Access"
+      .dashboard__sidebar-btn-describe
+        p Identity & Access
+        button(type='button' onclick='return false;') Okta Integration
+        button(type='button' onclick='return false;') ADFS Integration
+        button(type='button' onclick='return false;') AWS SSO Integration
+    a.dashboard__sidebar-btn(href="#")
+      .dashboard__sidebar-btn-circle.c-popper
+        i.icon-font.icon-network
+        .c-poppertext.c-poppertext--info
+          u
+            | Network
+      .dashboard__sidebar-btn-describe
+        p Network
+    a.dashboard__sidebar-btn(href="#")
+      .dashboard__sidebar-btn-circle.c-popper
+        i.icon-font.icon-security
+        .c-poppertext.c-poppertext--info
+          u
+            | Security
+      .dashboard__sidebar-btn-describe
+        p Security
+    a.dashboard__sidebar-btn(href="#")
+      .dashboard__sidebar-btn-circle.c-popper
+        i.icon-font.icon-infrastructure
+        .c-poppertext.c-poppertext--info
+          u
+            | Infrastructure
+      .dashboard__sidebar-btn-describe
+        p Infrastructure
+    a.dashboard__sidebar-btn(href="#")
+      .dashboard__sidebar-btn-circle.c-popper
+        i.icon-font.icon-governance
+        .c-poppertext.c-poppertext--info
+          u
+            | Governance
+      .dashboard__sidebar-btn-describe
+        p Governance
+    a.dashboard__sidebar-btn(href="#")
+      .dashboard__sidebar-btn-circle.c-popper
+        i.icon-font.icon-monitoring
+        .c-poppertext.c-poppertext--info
+          u
+            | Monitoring
+      .dashboard__sidebar-btn-describe
+        p Monitoring
+    a.dashboard__sidebar-btn(href="#")
+      .dashboard__sidebar-btn-circle.c-popper
+        i.icon-font.icon-data-protection
+        .c-poppertext.c-poppertext--info
+          u
+            span!= "Data <br>Protection"
+      .dashboard__sidebar-btn-describe
+        p Data Protection
+    a.dashboard__sidebar-btn(href="#")
+      .dashboard__sidebar-btn-circle.c-popper
+        i.icon-font.icon-digital
+        .c-poppertext.c-poppertext--info
+          u
+            | Digital
+      .dashboard__sidebar-btn-describe
+        p Digital

@@ -1,0 +1,94 @@
+.dashboard__header
+
+  // TOP
+  .dashboard__header-top
+
+    .dashboard__header-top--left
+
+      .dashboard__logo.dashboard__logo--sublogo
+        a(href="#")
+          img(src="img/sublogo.svg" alt="")
+
+      .dashboard__logo
+        a(href="#")
+          img(src="img/logo-color.svg" alt="")
+
+    .dashboard__header-top--right
+
+      div
+
+        .dashboard__header-option
+          a(href="#")
+            i.icon-font.icon-setting
+          a(href="#")
+            i.icon-font.icon-notification
+
+      div
+
+        .dashboard__profile
+          a.dashboard__profile-toggle(href="#")
+            p Ryan M
+            div
+              img(src="img/img-user.png" alt="")
+          .dashboard__profile-dropdown
+            .dashboard__profile-toggle
+              p Ryan M
+              div
+                img(src="img/img-user.png" alt="")
+            .dashboard__profile-info
+              a(href="mailto:ryan@epic9.io") ryan@epic9.io
+              a(href="#") Epic9
+            .dashboard__profile-line
+            div
+              a.dashboard__profile-link(href="#")
+                i.icon-font.icon-sort
+                span Switch User
+              a.dashboard__profile-link(href="#")
+                i.icon-font.icon-exit
+                span Sign out
+            .dashboard__profile-line
+            div
+              a.dashboard__profile-link.dashboard__profile-link--admin(href="#")
+                i.icon-font.icon-profile
+                span Admin
+
+  // BOTTOM
+  .dashboard__header-bottom
+
+    .dashboard__header-bottom--left
+
+      p Dashboard
+      div
+        img(src="img/logo-aws.svg" alt="")
+
+    .dashboard__header-bottom--middle
+
+      ul.dashboard__header-list
+        li
+
+          .dashboard__header-label
+            p Epic9
+
+        li
+
+          .dashboard__header-dropdown
+            a(href="#")
+              span NewEpicProject
+              i.icon-font.icon-corner
+
+        li
+
+          .dashboard__header-action
+            a.save(href="#")
+              i.icon-font.icon-save
+            a.play(href="#")
+              i.icon-font.icon-play
+
+    .dashboard__header-bottom--right
+
+      a(href="#") Plan
+      a(href="#") Design
+      a(href="#") Build
+      a(href="#") Configure
+      a.is-disabled(href="#") Validate
+
