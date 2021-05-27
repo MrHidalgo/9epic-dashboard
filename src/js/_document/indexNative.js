@@ -5,7 +5,29 @@
 	/*
 	* CALLBACK :: start
 	* ============================================= */
-
+	const sidebarCB = () => {
+		$('.dashboard__sidebar-circle').on('click', (ev) => {
+			$('[hamburger-js]').trigger('click');
+		});
+		
+		$('.dashboard__sidebar-btn').on('click', (ev) => {
+			if($(ev.currentTarget).hasClass('is-active')) {
+				$(ev.currentTarget).removeClass('is-active');
+				
+				$(ev.currentTarget)
+					.closest('.dashboard__sidebar-collapse-head')
+					.siblings('.dashboard__sidebar-collapse-body').slideUp(350);
+			} else {
+				$('.dashboard__sidebar-btn').removeClass('is-active');
+				$(ev.currentTarget).addClass('is-active');
+				
+				$('.dashboard__sidebar-collapse-body').slideUp(350);
+				$(ev.currentTarget)
+					.closest('.dashboard__sidebar-collapse-head')
+					.siblings('.dashboard__sidebar-collapse-body').slideDown(350);
+			}
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -26,6 +48,7 @@
 		// ==========================================
 
 		// callback
+		sidebarCB();
 		// ==========================================
 	};
 	initNative();

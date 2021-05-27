@@ -21,14 +21,14 @@ const initHamburger = () => {
 				elem.classList.remove("is-active");
 				mobileContainer.classList.remove("is-open");
 
-				$('.dashboard__sidebar-btn-describe').hide();
+				$('.dashboard__sidebar-btn').hide();
 				$('.dashboard__sidebar .dashboard__logo').hide();
 			} else {
 				elem.classList.add("is-active");
 				mobileContainer.classList.add("is-open");
 				
 				setTimeout(() => {
-					$('.dashboard__sidebar-btn-describe').fadeIn(500);
+					$('.dashboard__sidebar-btn').fadeIn(500);
 					$('.dashboard__sidebar .dashboard__logo').fadeIn(500);
 				}, 250);
 			}

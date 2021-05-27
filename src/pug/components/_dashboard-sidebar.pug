@@ -10,78 +10,148 @@
 
   .dashboard__sidebar-bottom
 
-    a.dashboard__sidebar-btn(href="#")
-      .dashboard__sidebar-btn-circle.c-popper
-        i.icon-font.icon-account-framework
-        .c-poppertext.c-poppertext--info
-          u
-            span!= "Account <br>Framework"
-      .dashboard__sidebar-btn-describe
-        p Account Framework
-    a.dashboard__sidebar-btn(href="#")
-      .dashboard__sidebar-btn-circle.c-popper
-        i.icon-font.icon-identity-access
-        .c-poppertext.c-poppertext--info
-          u
-            span!= "Identity <br>& Access"
-      .dashboard__sidebar-btn-describe
-        p Identity & Access
-        button(type='button' onclick='return false;') Okta Integration
-        button(type='button' onclick='return false;') ADFS Integration
-        button(type='button' onclick='return false;') AWS SSO Integration
-    a.dashboard__sidebar-btn(href="#")
-      .dashboard__sidebar-btn-circle.c-popper
-        i.icon-font.icon-network
-        .c-poppertext.c-poppertext--info
-          u
-            | Network
-      .dashboard__sidebar-btn-describe
-        p Network
-    a.dashboard__sidebar-btn(href="#")
-      .dashboard__sidebar-btn-circle.c-popper
-        i.icon-font.icon-security
-        .c-poppertext.c-poppertext--info
-          u
-            | Security
-      .dashboard__sidebar-btn-describe
-        p Security
-    a.dashboard__sidebar-btn(href="#")
-      .dashboard__sidebar-btn-circle.c-popper
-        i.icon-font.icon-infrastructure
-        .c-poppertext.c-poppertext--info
-          u
-            | Infrastructure
-      .dashboard__sidebar-btn-describe
-        p Infrastructure
-    a.dashboard__sidebar-btn(href="#")
-      .dashboard__sidebar-btn-circle.c-popper
-        i.icon-font.icon-governance
-        .c-poppertext.c-poppertext--info
-          u
-            | Governance
-      .dashboard__sidebar-btn-describe
-        p Governance
-    a.dashboard__sidebar-btn(href="#")
-      .dashboard__sidebar-btn-circle.c-popper
-        i.icon-font.icon-monitoring
-        .c-poppertext.c-poppertext--info
-          u
-            | Monitoring
-      .dashboard__sidebar-btn-describe
-        p Monitoring
-    a.dashboard__sidebar-btn(href="#")
-      .dashboard__sidebar-btn-circle.c-popper
-        i.icon-font.icon-data-protection
-        .c-poppertext.c-poppertext--info
-          u
-            span!= "Data <br>Protection"
-      .dashboard__sidebar-btn-describe
-        p Data Protection
-    a.dashboard__sidebar-btn(href="#")
-      .dashboard__sidebar-btn-circle.c-popper
-        i.icon-font.icon-digital
-        .c-poppertext.c-poppertext--info
-          u
-            | Digital
-      .dashboard__sidebar-btn-describe
-        p Digital
+    .dashboard__sidebar-collapse
+      div
+        .dashboard__sidebar-collapse-head
+          div
+            a.dashboard__sidebar-circle(href='#')
+              i.icon-font.icon-account-framework
+          div
+            a.dashboard__sidebar-btn(href='#')
+              p Account Framework
+
+        .dashboard__sidebar-collapse-body
+          div
+            a(href="#") Enterprise Core Accounts
+            a(href="#") Environment Strategy
+            a(href="#") Application Accounts
+            a(href="#") Developer Sandbox Acc.
+      div
+        .dashboard__sidebar-collapse-head
+          div
+            a.dashboard__sidebar-circle(href='#')
+              i.icon-font.icon-identity-access
+          div
+            a.dashboard__sidebar-btn(href='#')
+              p Identity & Access
+
+        .dashboard__sidebar-collapse-body
+          div
+            a(href="#") Okta Integration
+            a(href="#") ADFS Integration
+            a(href="#") AWS SSO Integration
+      div
+        .dashboard__sidebar-collapse-head
+          div
+            a.dashboard__sidebar-circle(href='#')
+              i.icon-font.icon-network
+          div
+            a.dashboard__sidebar-btn(href='#')
+              p Network
+
+        .dashboard__sidebar-collapse-body
+          div
+            a(href="#") Data Center
+            a(href="#") AWS Environment
+            a(href="#") VPC Design
+            a(href="#") VPS Factory
+            a(href="#") Inter-VPC Connectivity
+            a(href="#") Cross-region Connectivity
+            a(href="#") VPN Connectivity
+            a(href="#") DirectConnect
+            a(href="#") Traffic Inspection
+            a(href="#") VPC Endpoints
+            a(href="#") Private DNS
+      div
+        .dashboard__sidebar-collapse-head
+          div
+            a.dashboard__sidebar-circle(href='#')
+              i.icon-font.icon-network
+          div
+            a.dashboard__sidebar-btn(href='#')
+              p Security
+
+        .dashboard__sidebar-collapse-body
+          div
+            a(href="#") Compliance Management
+            a(href="#") Intelligent Threat Detection
+            a(href="#") Vulnerability Management
+            a(href="#") Endpoint Protection
+            a(href="#") Secrets Management
+            a(href="#") Perimeter Protection
+            a(href="#") SIEM
+      div
+        .dashboard__sidebar-collapse-head
+          div
+            a.dashboard__sidebar-circle(href='#')
+              i.icon-font.icon-infrastructure
+          div
+            a.dashboard__sidebar-btn(href='#')
+              p Infrastructure
+
+        .dashboard__sidebar-collapse-body
+          div
+            a(href="#") Active Directory Integration
+            a(href="#") Image Management
+            a(href="#") Patch Management
+            a(href="#") VDI Solution
+      div
+        .dashboard__sidebar-collapse-head
+          div
+            a.dashboard__sidebar-circle(href='#')
+              i.icon-font.icon-governance
+          div
+            a.dashboard__sidebar-btn(href='#')
+              p Governance
+
+        .dashboard__sidebar-collapse-body
+          div
+            a(href="#") Tagging Strategy
+            a(href="#") Service Control Policies
+            a(href="#") Config Rules
+            a(href="#") Budget Enforcement
+            a(href="#") AWS Limits Monitor
+            a(href="#") ServiceNow Integration
+      div
+        .dashboard__sidebar-collapse-head
+          div
+            a.dashboard__sidebar-circle(href='#')
+              i.icon-font.icon-monitoring
+          div
+            a.dashboard__sidebar-btn(href='#')
+              p Monitoring
+
+        .dashboard__sidebar-collapse-body
+          div
+            a(href="#") CloudWatch Rules
+            a(href="#") Centralized Logging
+            a(href="#") Log Analytics
+            a(href="#") Monitoring Tools Integration
+      div
+        .dashboard__sidebar-collapse-head
+          div
+            a.dashboard__sidebar-circle(href='#')
+              i.icon-font.icon-data-protection
+          div
+            a.dashboard__sidebar-btn(href='#')
+              p Data Protection
+
+        .dashboard__sidebar-collapse-body
+          div
+            a(href="#") Backup & Archives
+            a(href="#") Certificate Management
+            a(href="#") Key Management
+      div
+        .dashboard__sidebar-collapse-head
+          div
+            a.dashboard__sidebar-circle(href='#')
+              i.icon-font.icon-digital
+          div
+            a.dashboard__sidebar-btn(href='#')
+              p Digital
+
+        .dashboard__sidebar-collapse-body
+          div
+            a(href="#") Containers
+            a(href="#") ServerLess
+            a(href="#") SaaS

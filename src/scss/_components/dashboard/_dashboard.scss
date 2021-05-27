@@ -1,0 +1,40 @@
+// SECTION :: START
+
+.dashboard {
+	position: relative;
+
+	&__wrapper {
+		display: flex;
+		min-height: 100vh;
+		padding-top: 210px;
+		padding-left: 110px;
+		padding-right: 30px;
+	}
+
+	&__logo {
+		display: flex;
+
+		&.dashboard__logo--sublogo {
+			padding-right: 30px;
+		}
+
+		a {
+			display: flex;
+			align-items: flex-start;
+
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	@import "dashboard--sidebar";
+	@import "dashboard--header";
+	@import "dashboard--profile";
+	@import "dashboard--block";
+	@import "dashboard--box";
+}
+
+// SECTION :: END

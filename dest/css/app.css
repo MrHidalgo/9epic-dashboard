@@ -465,121 +465,6 @@ picture {
   height: 100%;
 }
 
-/* line 3, src/scss/_shared/_common.scss */
-.c-popper {
-  position: relative;
-}
-
-/* line 7, src/scss/_shared/_common.scss */
-.c-popper:hover .c-poppertext {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1000;
-  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-/* line 15, src/scss/_shared/_common.scss */
-.c-popper .c-poppertext {
-  opacity: 0;
-  visibility: hidden;
-  display: block;
-  z-index: -1;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  min-width: 80px;
-  max-width: 220px;
-  padding-top: 10px;
-  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-/* line 29, src/scss/_shared/_common.scss */
-.c-popper .c-poppertext.c-poppertext--info {
-  min-width: unset;
-  max-width: unset;
-}
-
-/* line 33, src/scss/_shared/_common.scss */
-.c-popper .c-poppertext.c-poppertext--info u {
-  white-space: nowrap;
-  min-height: unset;
-  padding: 3px 5px 5px;
-  border-color: #111a30;
-  background-color: #111a30;
-  color: #ffffff !important;
-  font-size: 10px;
-}
-
-/* line 42, src/scss/_shared/_common.scss */
-.c-popper .c-poppertext.c-poppertext--info u:after {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-width: 6px;
-  border-style: solid;
-  border-color: transparent transparent #111a30 transparent;
-}
-
-/* line 57, src/scss/_shared/_common.scss */
-.c-popper .c-poppertext > u {
-  white-space: nowrap;
-  display: block;
-  width: 100%;
-  min-height: 29px;
-  padding: 10px 15px;
-  border-width: 1px;
-  border-color: #a0c2f9;
-  border-style: solid;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  background-color: white;
-  -webkit-box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.14);
-          box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.14);
-  text-decoration: none;
-  color: #303030;
-  font-size: 14px;
-  text-align: center;
-}
-
-/* line 74, src/scss/_shared/_common.scss */
-.c-popper .c-poppertext > u .c-btn {
-  width: 100%;
-  min-width: unset;
-  height: 32px;
-}
-
-/* line 79, src/scss/_shared/_common.scss */
-.c-popper .c-poppertext > u .c-btn span {
-  font-size: 12px;
-  text-transform: capitalize;
-}
-
-/* line 84, src/scss/_shared/_common.scss */
-.c-popper .c-poppertext > u .c-btn .icon-font {
-  margin-right: 0;
-  margin-left: 10px;
-  font-size: 14px;
-}
-
-/* line 90, src/scss/_shared/_common.scss */
-.c-popper .c-poppertext > u .c-btn__wrapper {
-  width: 100%;
-  padding-top: 5px;
-}
-
 /* line 1, src/scss/_shared/_iconFont.scss */
 .icon-font {
   display: -webkit-box;
@@ -589,12 +474,12 @@ picture {
   line-height: 1;
 }
 
-/* line 3, src/scss/_components/_dashboard.scss */
+/* line 3, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard {
   position: relative;
 }
 
-/* line 6, src/scss/_components/_dashboard.scss */
+/* line 6, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -606,7 +491,39 @@ picture {
   padding-right: 30px;
 }
 
-/* line 14, src/scss/_components/_dashboard.scss */
+/* line 14, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 17, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__logo.dashboard__logo--sublogo {
+  padding-right: 30px;
+}
+
+/* line 21, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__logo a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 25, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__logo a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 1, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar {
   z-index: 100;
   overflow: hidden;
@@ -626,8 +543,8 @@ picture {
   height: 100%;
   -webkit-border-radius: 0;
           border-radius: 0;
-  -webkit-box-shadow: 10px 0px 50px rgba(18, 30, 49, 0);
-          box-shadow: 10px 0px 50px rgba(18, 30, 49, 0);
+  -webkit-box-shadow: 10px 0 50px 0 rgba(18, 30, 49, 0);
+          box-shadow: 10px 0 50px 0 rgba(18, 30, 49, 0);
   background: -webkit-linear-gradient(270.08deg, #4097D9 -23.94%, #30C4A0 53.12%, #00B94F 120.74%);
   background: -o-linear-gradient(270.08deg, #4097D9 -23.94%, #30C4A0 53.12%, #00B94F 120.74%);
   background: linear-gradient(179.92deg, #4097D9 -23.94%, #30C4A0 53.12%, #00B94F 120.74%);
@@ -638,7 +555,7 @@ picture {
   transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-border-radius 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 29, src/scss/_components/_dashboard.scss */
+/* line 16, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar.is-open {
   width: 400px;
   -webkit-border-radius: 0 40px 40px 0;
@@ -652,12 +569,12 @@ picture {
   transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-border-radius 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 35, src/scss/_components/_dashboard.scss */
+/* line 22, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar.is-open .c-poppertext {
   display: none !important;
 }
 
-/* line 40, src/scss/_components/_dashboard.scss */
+/* line 27, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar.is-open .dashboard__sidebar-top .hamburger {
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -665,7 +582,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 44, src/scss/_components/_dashboard.scss */
+/* line 31, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar.is-open .dashboard__sidebar-top .hamburger .hamburger-box {
   -webkit-transform: scale(0.55);
       -ms-transform: scale(0.55);
@@ -677,7 +594,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 52, src/scss/_components/_dashboard.scss */
+/* line 39, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar-top {
   display: -webkit-box;
   display: -webkit-flex;
@@ -695,12 +612,12 @@ picture {
   padding: 15px;
 }
 
-/* line 59, src/scss/_components/_dashboard.scss */
+/* line 46, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar-top .dashboard__logo {
   display: none;
 }
 
-/* line 63, src/scss/_components/_dashboard.scss */
+/* line 50, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar-top .hamburger {
   display: -webkit-box;
   display: -webkit-flex;
@@ -724,7 +641,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 73, src/scss/_components/_dashboard.scss */
+/* line 60, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar-top .hamburger .hamburger-box {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
@@ -736,8 +653,9 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 80, src/scss/_components/_dashboard.scss */
+/* line 67, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar-bottom {
+  overflow: hidden;
   overflow-y: auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -755,36 +673,109 @@ picture {
   min-height: 1px;
   max-height: 100%;
   padding-left: 15px;
+  padding-bottom: 15px;
 }
 
-/* line 90, src/scss/_components/_dashboard.scss */
-.dashboard__sidebar-btn {
-  position: relative;
+/* line 79, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  max-height: 100%;
 }
 
-/* line 96, src/scss/_components/_dashboard.scss */
-.dashboard__sidebar-btn:hover .dashboard__sidebar-btn-circle {
-  background-color: #ffffff;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+/* line 86, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse > div {
+  padding-bottom: 20px;
 }
 
-/* line 100, src/scss/_components/_dashboard.scss */
-.dashboard__sidebar-btn:hover .dashboard__sidebar-btn-circle .icon-font {
-  color: #4097d9;
+/* line 90, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 95, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse-head > div:nth-of-type(1) {
+  width: 50px;
+}
+
+/* line 98, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse-head > div:nth-of-type(2) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 20px;
+}
+
+/* line 108, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse-body {
+  display: none;
+  padding-left: 70px;
+}
+
+/* line 112, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse-body > div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 116, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse-body a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
-/* line 107, src/scss/_components/_dashboard.scss */
-.dashboard__sidebar-btn-circle {
+/* line 123, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse-body a:hover {
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 128, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-collapse-body a:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+/* line 135, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-circle {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -808,8 +799,24 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 118, src/scss/_components/_dashboard.scss */
-.dashboard__sidebar-btn-circle .icon-font {
+/* line 146, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-circle:hover {
+  background-color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 150, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-circle:hover .icon-font {
+  color: #4097d9;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 156, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-circle .icon-font {
   color: #ffffff;
   font-size: 20px;
   -webkit-transition: color 0.3s ease-in-out;
@@ -817,58 +824,61 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 123, src/scss/_components/_dashboard.scss */
-.dashboard__sidebar-btn-circle .icon-font.icon-account-framework, .dashboard__sidebar-btn-circle .icon-font.icon-identity-access, .dashboard__sidebar-btn-circle .icon-font.icon-monitoring, .dashboard__sidebar-btn-circle .icon-font.icon-data-protection, .dashboard__sidebar-btn-circle .icon-font.icon-digital {
+/* line 161, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-circle .icon-font.icon-account-framework, .dashboard__sidebar-circle .icon-font.icon-identity-access, .dashboard__sidebar-circle .icon-font.icon-monitoring, .dashboard__sidebar-circle .icon-font.icon-data-protection, .dashboard__sidebar-circle .icon-font.icon-digital {
   font-size: 16px;
 }
 
-/* line 133, src/scss/_components/_dashboard.scss */
-.dashboard__sidebar-btn-describe {
-  white-space: nowrap;
-  display: none;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-width: 1px;
-  max-width: 100%;
-  padding-top: 12px;
-  padding-left: 20px;
-}
-
-/* line 142, src/scss/_components/_dashboard.scss */
-.dashboard__sidebar-btn-describe p {
-  padding-bottom: 10px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #FFFFFF;
-}
-
-/* line 150, src/scss/_components/_dashboard.scss */
-.dashboard__sidebar-btn-describe button {
-  outline: none;
-  cursor: pointer;
+/* line 171, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-btn {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0;
-  margin: 0;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-border-radius: 0;
-          border-radius: 0;
-  background-color: transparent;
-  padding-bottom: 10px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 170, src/scss/_components/_dashboard.scss */
+/* line 177, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-btn:hover p:before, .dashboard__sidebar-btn:hover p:after {
+  width: 50%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 185, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-btn p {
+  white-space: nowrap;
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+/* line 192, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-btn p:before, .dashboard__sidebar-btn p:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 203, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-btn p:before {
+  left: 50%;
+}
+
+/* line 206, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar-btn p:after {
+  right: 50%;
+}
+
+/* line 1, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header {
   z-index: 99;
   position: fixed;
@@ -888,7 +898,7 @@ picture {
   background-color: #F9F9F9;
 }
 
-/* line 181, src/scss/_components/_dashboard.scss */
+/* line 12, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header:after {
   content: '';
   position: absolute;
@@ -900,7 +910,7 @@ picture {
   background-color: rgba(18, 30, 49, 0.1);
 }
 
-/* line 191, src/scss/_components/_dashboard.scss */
+/* line 22, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-top {
   display: -webkit-box;
   display: -webkit-flex;
@@ -917,7 +927,7 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 197, src/scss/_components/_dashboard.scss */
+/* line 28, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-top--left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -929,7 +939,7 @@ picture {
           align-items: center;
 }
 
-/* line 202, src/scss/_components/_dashboard.scss */
+/* line 33, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-top--right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -945,7 +955,7 @@ picture {
           justify-content: space-between;
 }
 
-/* line 209, src/scss/_components/_dashboard.scss */
+/* line 40, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom {
   position: relative;
   display: -webkit-box;
@@ -959,7 +969,7 @@ picture {
           box-shadow: 0 10px 80px 0 rgba(18, 30, 49, 0.05);
 }
 
-/* line 216, src/scss/_components/_dashboard.scss */
+/* line 47, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -978,7 +988,7 @@ picture {
   background: linear-gradient(179.92deg, #4097D9 -23.94%, #30C4A0 53.12%, #00B94F 120.74%);
 }
 
-/* line 224, src/scss/_components/_dashboard.scss */
+/* line 55, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--left p {
   padding-right: 20px;
   font-weight: 800;
@@ -987,7 +997,7 @@ picture {
   color: #FFFFFF;
 }
 
-/* line 232, src/scss/_components/_dashboard.scss */
+/* line 63, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--left div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1009,14 +1019,14 @@ picture {
   background-color: #66C68D;
 }
 
-/* line 242, src/scss/_components/_dashboard.scss */
+/* line 73, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--left div img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* line 250, src/scss/_components/_dashboard.scss */
+/* line 81, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--middle {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1028,7 +1038,7 @@ picture {
   padding: 15px 20px;
 }
 
-/* line 258, src/scss/_components/_dashboard.scss */
+/* line 89, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1041,7 +1051,7 @@ picture {
   background-color: #ECEEF3;
 }
 
-/* line 265, src/scss/_components/_dashboard.scss */
+/* line 96, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--right a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1063,13 +1073,13 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 277, src/scss/_components/_dashboard.scss */
+/* line 108, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--right a.is-disabled {
   pointer-events: none;
   color: rgba(19, 15, 38, 0.3);
 }
 
-/* line 282, src/scss/_components/_dashboard.scss */
+/* line 113, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--right a:hover {
   color: #4097D9;
   -webkit-transition: color 0.3s ease-in-out;
@@ -1077,7 +1087,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 290, src/scss/_components/_dashboard.scss */
+/* line 121, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1090,7 +1100,7 @@ picture {
   margin-right: 50px;
 }
 
-/* line 295, src/scss/_components/_dashboard.scss */
+/* line 126, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1102,18 +1112,18 @@ picture {
           align-items: center;
 }
 
-/* line 299, src/scss/_components/_dashboard.scss */
+/* line 130, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option a:not(:last-of-type) {
   margin-right: 15px;
 }
 
-/* line 303, src/scss/_components/_dashboard.scss */
+/* line 134, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option a .icon-font {
   font-size: 20px;
   color: #4D508F;
 }
 
-/* line 310, src/scss/_components/_dashboard.scss */
+/* line 141, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1126,7 +1136,7 @@ picture {
   height: 40px;
 }
 
-/* line 315, src/scss/_components/_dashboard.scss */
+/* line 146, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-list li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1139,14 +1149,14 @@ picture {
   height: 100%;
 }
 
-/* line 320, src/scss/_components/_dashboard.scss */
+/* line 151, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-list li:not(:last-of-type) {
   padding-right: 20px;
   margin-right: 20px;
   border-right: 1px solid rgba(99, 107, 115, 0.1);
 }
 
-/* line 328, src/scss/_components/_dashboard.scss */
+/* line 159, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1167,7 +1177,7 @@ picture {
   background-color: rgba(16, 189, 106, 0.1);
 }
 
-/* line 337, src/scss/_components/_dashboard.scss */
+/* line 168, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-label p {
   font-weight: 600;
   font-size: 14px;
@@ -1175,12 +1185,12 @@ picture {
   color: #10BD6A;
 }
 
-/* line 345, src/scss/_components/_dashboard.scss */
+/* line 176, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown {
   position: relative;
 }
 
-/* line 348, src/scss/_components/_dashboard.scss */
+/* line 179, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1192,25 +1202,25 @@ picture {
           align-items: center;
 }
 
-/* line 352, src/scss/_components/_dashboard.scss */
+/* line 183, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown a span,
 .dashboard__header-dropdown a .icon-font {
   color: #4097D9;
 }
 
-/* line 357, src/scss/_components/_dashboard.scss */
+/* line 188, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown a span {
   font-weight: 600;
   font-size: 14px;
 }
 
-/* line 362, src/scss/_components/_dashboard.scss */
+/* line 193, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown a .icon-font {
   margin-left: 10px;
   font-size: 14px;
 }
 
-/* line 369, src/scss/_components/_dashboard.scss */
+/* line 200, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1222,7 +1232,7 @@ picture {
           align-items: center;
 }
 
-/* line 373, src/scss/_components/_dashboard.scss */
+/* line 204, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1238,13 +1248,13 @@ picture {
           justify-content: center;
 }
 
-/* line 378, src/scss/_components/_dashboard.scss */
+/* line 209, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.save {
   font-size: 20px;
   color: rgba(18, 30, 49, 0.5);
 }
 
-/* line 383, src/scss/_components/_dashboard.scss */
+/* line 214, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.play {
   width: 30px;
   height: 30px;
@@ -1253,23 +1263,23 @@ picture {
   background-color: #4097d9;
 }
 
-/* line 389, src/scss/_components/_dashboard.scss */
+/* line 220, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.play .icon-font {
   color: #ffffff;
   font-size: 10px;
 }
 
-/* line 395, src/scss/_components/_dashboard.scss */
+/* line 226, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a:not(:last-of-type) {
   margin-right: 30px;
 }
 
-/* line 402, src/scss/_components/_dashboard.scss */
+/* line 1, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile {
   position: relative;
 }
 
-/* line 406, src/scss/_components/_dashboard.scss */
+/* line 5, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile:hover .dashboard__profile-dropdown {
   opacity: 1;
   visibility: visible;
@@ -1283,7 +1293,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 414, src/scss/_components/_dashboard.scss */
+/* line 13, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-toggle {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1295,7 +1305,7 @@ picture {
           align-items: center;
 }
 
-/* line 418, src/scss/_components/_dashboard.scss */
+/* line 17, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-toggle p {
   padding-right: 15px;
   font-weight: bold;
@@ -1303,7 +1313,7 @@ picture {
   color: #121E31;
 }
 
-/* line 425, src/scss/_components/_dashboard.scss */
+/* line 24, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-toggle div {
   overflow: hidden;
   position: relative;
@@ -1314,7 +1324,7 @@ picture {
   border: 2px solid #FFFFFF;
 }
 
-/* line 439, src/scss/_components/_dashboard.scss */
+/* line 38, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-dropdown {
   z-index: 10;
   opacity: 0;
@@ -1339,7 +1349,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 454, src/scss/_components/_dashboard.scss */
+/* line 53, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-dropdown .dashboard__profile-toggle {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -1347,18 +1357,18 @@ picture {
           justify-content: space-between;
 }
 
-/* line 457, src/scss/_components/_dashboard.scss */
+/* line 56, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-dropdown .dashboard__profile-toggle p {
   font-size: 18px;
 }
 
-/* line 461, src/scss/_components/_dashboard.scss */
+/* line 60, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-dropdown .dashboard__profile-toggle div {
   width: 50px;
   height: 50px;
 }
 
-/* line 468, src/scss/_components/_dashboard.scss */
+/* line 67, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-info {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1371,7 +1381,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 472, src/scss/_components/_dashboard.scss */
+/* line 71, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-info a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1382,14 +1392,14 @@ picture {
   color: #10BD6A;
 }
 
-/* line 478, src/scss/_components/_dashboard.scss */
+/* line 77, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-info a:first-of-type {
   margin-bottom: 10px;
   font-size: 12px;
   color: #121E31;
 }
 
-/* line 486, src/scss/_components/_dashboard.scss */
+/* line 85, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-line {
   width: 100%;
   height: 1px;
@@ -1398,7 +1408,7 @@ picture {
   background-color: rgba(51, 50, 92, 0.2);
 }
 
-/* line 494, src/scss/_components/_dashboard.scss */
+/* line 93, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1411,68 +1421,36 @@ picture {
   width: 100%;
 }
 
-/* line 499, src/scss/_components/_dashboard.scss */
+/* line 98, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link:not(:last-of-type) {
   margin-bottom: 25px;
 }
 
-/* line 504, src/scss/_components/_dashboard.scss */
+/* line 103, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link.dashboard__profile-link--admin .icon-font,
 .dashboard__profile-link.dashboard__profile-link--admin span {
   color: #4097d9;
 }
 
-/* line 510, src/scss/_components/_dashboard.scss */
+/* line 109, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link .icon-font {
   font-size: 16px;
   color: #33325c;
 }
 
-/* line 514, src/scss/_components/_dashboard.scss */
+/* line 113, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link .icon-font + span {
   padding-left: 10px;
 }
 
-/* line 519, src/scss/_components/_dashboard.scss */
+/* line 118, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link span {
   font-weight: 600;
   font-size: 14px;
   color: #33325C;
 }
 
-/* line 527, src/scss/_components/_dashboard.scss */
-.dashboard__logo {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-/* line 530, src/scss/_components/_dashboard.scss */
-.dashboard__logo.dashboard__logo--sublogo {
-  padding-right: 30px;
-}
-
-/* line 534, src/scss/_components/_dashboard.scss */
-.dashboard__logo a {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-/* line 538, src/scss/_components/_dashboard.scss */
-.dashboard__logo a img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* line 546, src/scss/_components/_dashboard.scss */
+/* line 1, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block {
   padding: 15px;
   -webkit-border-radius: 10px;
@@ -1482,7 +1460,7 @@ picture {
   background-color: #FFFFFF;
 }
 
-/* line 552, src/scss/_components/_dashboard.scss */
+/* line 7, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1500,12 +1478,12 @@ picture {
   width: 100%;
 }
 
-/* line 558, src/scss/_components/_dashboard.scss */
+/* line 13, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-wrapper > div {
   padding-bottom: 20px;
 }
 
-/* line 563, src/scss/_components/_dashboard.scss */
+/* line 18, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1516,12 +1494,12 @@ picture {
           flex-wrap: wrap;
 }
 
-/* line 567, src/scss/_components/_dashboard.scss */
+/* line 22, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-row > div {
   padding-right: 10px;
 }
 
-/* line 572, src/scss/_components/_dashboard.scss */
+/* line 27, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1534,7 +1512,7 @@ picture {
   padding-bottom: 15px;
 }
 
-/* line 577, src/scss/_components/_dashboard.scss */
+/* line 32, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header p {
   padding-right: 10px;
   font-weight: bold;
@@ -1542,7 +1520,7 @@ picture {
   color: #33325C;
 }
 
-/* line 584, src/scss/_components/_dashboard.scss */
+/* line 39, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1562,38 +1540,38 @@ picture {
           border-radius: 50%;
 }
 
-/* line 592, src/scss/_components/_dashboard.scss */
+/* line 47, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span.success {
   background-color: #00b94f;
 }
 
-/* line 595, src/scss/_components/_dashboard.scss */
+/* line 50, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span.refresh {
   background-color: #4097d9;
 }
 
-/* line 598, src/scss/_components/_dashboard.scss */
+/* line 53, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span.decline {
   background-color: #ed6459;
 }
 
-/* line 602, src/scss/_components/_dashboard.scss */
+/* line 57, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span .icon-font {
   font-size: 14px;
   color: #ffffff;
 }
 
-/* line 606, src/scss/_components/_dashboard.scss */
+/* line 61, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span .icon-font.icon-checked {
   font-size: 9px;
 }
 
-/* line 609, src/scss/_components/_dashboard.scss */
+/* line 64, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span .icon-font.icon-close {
   font-size: 10px;
 }
 
-/* line 616, src/scss/_components/_dashboard.scss */
+/* line 71, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1604,12 +1582,12 @@ picture {
           flex-wrap: wrap;
 }
 
-/* line 621, src/scss/_components/_dashboard.scss */
+/* line 76, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-body .dashboard__box:not(:last-of-type) {
   margin-right: 10px;
 }
 
-/* line 628, src/scss/_components/_dashboard.scss */
+/* line 1, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1622,7 +1600,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 632, src/scss/_components/_dashboard.scss */
+/* line 5, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1640,14 +1618,14 @@ picture {
   text-align: center;
 }
 
-/* line 639, src/scss/_components/_dashboard.scss */
+/* line 12, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-header p {
   font-weight: 600;
   font-size: 13px;
   color: #4097D9;
 }
 
-/* line 646, src/scss/_components/_dashboard.scss */
+/* line 19, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1661,7 +1639,7 @@ picture {
           border-radius: 10px;
 }
 
-/* line 654, src/scss/_components/_dashboard.scss */
+/* line 27, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1673,7 +1651,7 @@ picture {
           align-items: center;
 }
 
-/* line 658, src/scss/_components/_dashboard.scss */
+/* line 31, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1691,7 +1669,7 @@ picture {
   min-width: 70px;
 }
 
-/* line 664, src/scss/_components/_dashboard.scss */
+/* line 37, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li.empty {
   width: 1px;
   height: 40px;
@@ -1701,7 +1679,7 @@ picture {
   background-color: rgba(18, 30, 49, 0.1);
 }
 
-/* line 673, src/scss/_components/_dashboard.scss */
+/* line 46, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1717,32 +1695,32 @@ picture {
   text-align: center;
 }
 
-/* line 681, src/scss/_components/_dashboard.scss */
+/* line 54, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a:hover {
   text-decoration: underline;
 }
 
-/* line 685, src/scss/_components/_dashboard.scss */
+/* line 58, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.green {
   color: #00B94F;
 }
 
-/* line 688, src/scss/_components/_dashboard.scss */
+/* line 61, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.gold {
   color: #CB9B29;
 }
 
-/* line 691, src/scss/_components/_dashboard.scss */
+/* line 64, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.red {
   color: #C14F45;
 }
 
-/* line 694, src/scss/_components/_dashboard.scss */
+/* line 67, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.orange {
   color: #F7C142;
 }
 
-/* line 699, src/scss/_components/_dashboard.scss */
+/* line 72, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1763,38 +1741,38 @@ picture {
   margin-bottom: 9px;
 }
 
-/* line 708, src/scss/_components/_dashboard.scss */
+/* line 81, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.success {
   background-color: #00b94f;
 }
 
-/* line 711, src/scss/_components/_dashboard.scss */
+/* line 84, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.refresh {
   background-color: #4097d9;
 }
 
-/* line 714, src/scss/_components/_dashboard.scss */
+/* line 87, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.decline {
   background-color: #ed6459;
 }
 
-/* line 718, src/scss/_components/_dashboard.scss */
+/* line 91, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font {
   font-size: 14px;
   color: #ffffff;
 }
 
-/* line 722, src/scss/_components/_dashboard.scss */
+/* line 95, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font.icon-checked {
   font-size: 9px;
 }
 
-/* line 725, src/scss/_components/_dashboard.scss */
+/* line 98, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font.icon-close {
   font-size: 10px;
 }
 
-/* line 731, src/scss/_components/_dashboard.scss */
+/* line 104, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li p {
   font-weight: bold;
   font-size: 12px;
