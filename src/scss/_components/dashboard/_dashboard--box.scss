@@ -1,6 +1,7 @@
 &__box {
 	display: flex;
 	flex-direction: column;
+	padding-top: 15px;
 
 	&-header {
 		display: flex;
@@ -20,13 +21,13 @@
 		flex: 1;
 		min-height: 1px;
 		max-height: 100%;
-		padding: 25px 30px;
+		padding: 15px 20px 10px;
 		border: 1px solid rgba(#121E31, 0.1);
 		border-radius: 10px;
 
 		ul {
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
 
 			li {
 				display: flex;
@@ -38,12 +39,13 @@
 					width: 1px;
 					height: 40px;
 					min-width: 1px;
-					margin-left: 20px;
-					margin-right: 20px;
+					margin-left: 15px;
+					margin-right: 15px;
 					background-color: rgba(#121E31, 0.1);
 				}
 
 				a {
+					position: relative;
 					display: flex;
 					justify-content: center;
 					margin-bottom: 5px;
@@ -51,21 +53,51 @@
 					font-size: 20px;
 					text-align: center;
 
+					&:after {
+						content: '';
+						opacity: 0;
+						position: absolute;
+						top: calc(100% - 2px);
+						left: 0;
+						width: 100%;
+						height: 1px;
+						@include transition(opacity);
+					}
+
 					&:hover {
-						text-decoration: underline;
+						&:after {
+							opacity: 1;
+							@include transition(opacity);
+						}
 					}
 
 					&.green {
 						color: #00B94F;
+
+						&:after {
+							background-color: #00B94F;
+						}
 					}
 					&.gold {
 						color: #CB9B29;
+
+						&:after {
+							background-color: #CB9B29;
+						}
 					}
 					&.red {
 						color: #C14F45;
+
+						&:after {
+							background-color: #C14F45;
+						}
 					}
 					&.orange {
 						color: #F7C142;
+
+						&:after {
+							background-color: #F7C142;
+						}
 					}
 				}
 
