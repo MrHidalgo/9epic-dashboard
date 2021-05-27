@@ -54,38 +54,47 @@
 	@if $filename == identity-access {
 		$char: "\E009";
 	}
-	@if $filename == infrastructure {
+	@if $filename == info {
 		$char: "\E00A";
 	}
-	@if $filename == monitoring {
+	@if $filename == infrastructure {
 		$char: "\E00B";
 	}
-	@if $filename == network {
+	@if $filename == monitoring {
 		$char: "\E00C";
 	}
-	@if $filename == notification {
+	@if $filename == network {
 		$char: "\E00D";
 	}
-	@if $filename == play {
+	@if $filename == notification {
 		$char: "\E00E";
 	}
-	@if $filename == profile {
+	@if $filename == play {
 		$char: "\E00F";
 	}
-	@if $filename == refresh {
+	@if $filename == profile {
 		$char: "\E010";
 	}
-	@if $filename == save {
+	@if $filename == refresh {
 		$char: "\E011";
 	}
-	@if $filename == security {
+	@if $filename == save {
 		$char: "\E012";
 	}
-	@if $filename == setting {
+	@if $filename == security {
 		$char: "\E013";
 	}
-	@if $filename == sort {
+	@if $filename == setting {
 		$char: "\E014";
+	}
+	@if $filename == sort {
+		$char: "\E015";
+	}
+	@if $filename == success {
+		$char: "\E016";
+	}
+	@if $filename == warning {
+		$char: "\E017";
 	}
 
 	@return $char;
@@ -138,6 +147,10 @@
 	@include icon(identity-access);
 
 }
+.icon-info {
+	@include icon(info);
+
+}
 .icon-infrastructure {
 	@include icon(infrastructure);
 
@@ -180,5 +193,13 @@
 }
 .icon-sort {
 	@include icon(sort);
+
+}
+.icon-success {
+	@include icon(success);
+
+}
+.icon-warning {
+	@include icon(warning);
 
 }
