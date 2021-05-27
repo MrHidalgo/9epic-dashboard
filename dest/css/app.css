@@ -481,17 +481,23 @@ picture {
 
 /* line 6, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper {
+  overflow: hidden;
+  overflow-y: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  padding-top: 210px;
+  min-height: -webkit-calc(100vh - 190px);
+  min-height: calc(100vh - 190px);
+  max-height: -webkit-calc(100vh - 190px);
+  max-height: calc(100vh - 190px);
+  margin-top: 190px;
+  padding-top: 20px;
   padding-left: 110px;
   padding-right: 30px;
 }
 
-/* line 14, src/scss/_components/dashboard/_dashboard.scss */
+/* line 18, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -499,12 +505,12 @@ picture {
   display: flex;
 }
 
-/* line 17, src/scss/_components/dashboard/_dashboard.scss */
+/* line 21, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo.dashboard__logo--sublogo {
   padding-right: 30px;
 }
 
-/* line 21, src/scss/_components/dashboard/_dashboard.scss */
+/* line 25, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -516,7 +522,7 @@ picture {
           align-items: flex-start;
 }
 
-/* line 25, src/scss/_components/dashboard/_dashboard.scss */
+/* line 29, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo a img {
   display: block;
   max-width: 100%;
@@ -1044,7 +1050,7 @@ picture {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 20px;
+  padding-left: 30px;
   padding-right: 20px;
   -webkit-border-radius: 0 10px 10px 50px;
           border-radius: 0 10px 10px 50px;
@@ -1062,7 +1068,6 @@ picture {
       -ms-flex-align: center;
           align-items: center;
   height: 70px;
-  margin-left: 30px;
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
@@ -1073,13 +1078,18 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 108, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 107, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-bottom--right a:not(:first-of-type) {
+  margin-left: 30px;
+}
+
+/* line 111, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--right a.is-disabled {
   pointer-events: none;
   color: rgba(19, 15, 38, 0.3);
 }
 
-/* line 113, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 116, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--right a:hover {
   color: #4097D9;
   -webkit-transition: color 0.3s ease-in-out;
@@ -1087,7 +1097,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 121, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 124, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1100,7 +1110,7 @@ picture {
   margin-right: 50px;
 }
 
-/* line 126, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 129, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1112,18 +1122,18 @@ picture {
           align-items: center;
 }
 
-/* line 130, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 133, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option a:not(:last-of-type) {
   margin-right: 15px;
 }
 
-/* line 134, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 137, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option a .icon-font {
   font-size: 20px;
   color: #4D508F;
 }
 
-/* line 141, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 144, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1136,7 +1146,7 @@ picture {
   height: 40px;
 }
 
-/* line 146, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 149, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-list li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1149,14 +1159,14 @@ picture {
   height: 100%;
 }
 
-/* line 151, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 154, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-list li:not(:last-of-type) {
   padding-right: 20px;
   margin-right: 20px;
   border-right: 1px solid rgba(99, 107, 115, 0.1);
 }
 
-/* line 159, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 162, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1177,7 +1187,7 @@ picture {
   background-color: rgba(16, 189, 106, 0.1);
 }
 
-/* line 168, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 171, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-label p {
   font-weight: 600;
   font-size: 14px;
@@ -1185,13 +1195,23 @@ picture {
   color: #10BD6A;
 }
 
-/* line 176, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 179, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 130px;
 }
 
-/* line 179, src/scss/_components/dashboard/_dashboard--header.scss */
-.dashboard__header-dropdown a {
+/* line 185, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown-toggle {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1200,27 +1220,111 @@ picture {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
-/* line 183, src/scss/_components/dashboard/_dashboard--header.scss */
-.dashboard__header-dropdown a span,
-.dashboard__header-dropdown a .icon-font {
+/* line 190, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown-toggle span,
+.dashboard__header-dropdown-toggle .icon-font {
   color: #4097D9;
 }
 
-/* line 188, src/scss/_components/dashboard/_dashboard--header.scss */
-.dashboard__header-dropdown a span {
+/* line 195, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown-toggle span {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
   font-weight: 600;
   font-size: 14px;
 }
 
-/* line 193, src/scss/_components/dashboard/_dashboard--header.scss */
-.dashboard__header-dropdown a .icon-font {
+/* line 203, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown-toggle .icon-font {
   margin-left: 10px;
   font-size: 14px;
 }
 
-/* line 200, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 209, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown-container {
+  z-index: 99;
+  overflow: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  max-height: 180px;
+  padding: 5px 0;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-box-shadow: 0 4px 50px 0 rgba(18, 30, 49, 0.05);
+          box-shadow: 0 4px 50px 0 rgba(18, 30, 49, 0.05);
+  background-color: #FFFFFF;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 226, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown-container.is-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 234, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown-container a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #130F26;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 249, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown-container a:hover {
+  background-color: #ECEEF3;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 257, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1232,7 +1336,7 @@ picture {
           align-items: center;
 }
 
-/* line 204, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 261, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1248,13 +1352,13 @@ picture {
           justify-content: center;
 }
 
-/* line 209, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 266, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.save {
   font-size: 20px;
   color: rgba(18, 30, 49, 0.5);
 }
 
-/* line 214, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 271, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.play {
   width: 30px;
   height: 30px;
@@ -1263,13 +1367,13 @@ picture {
   background-color: #4097d9;
 }
 
-/* line 220, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 277, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.play .icon-font {
   color: #ffffff;
   font-size: 10px;
 }
 
-/* line 226, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 283, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a:not(:last-of-type) {
   margin-right: 30px;
 }

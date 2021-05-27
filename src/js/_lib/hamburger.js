@@ -23,6 +23,9 @@ const initHamburger = () => {
 
 				$('.dashboard__sidebar-btn').hide();
 				$('.dashboard__sidebar .dashboard__logo').hide();
+				
+				$('.dashboard__sidebar-btn').removeClass('is-active');
+				$('.dashboard__sidebar-collapse-body').slideUp(350);
 			} else {
 				elem.classList.add("is-active");
 				mobileContainer.classList.add("is-open");

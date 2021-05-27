@@ -28,6 +28,19 @@
 			}
 		});
 	};
+	
+	
+	const dropdownCB = () => {
+		$('.dashboard__header-dropdown-toggle').on('click', (ev) => {
+			$('.dashboard__header-dropdown-container').toggleClass('is-open');
+		});
+		
+		$('.dashboard__header-dropdown-container a').on('click', (ev) => {
+			$('.dashboard__header-dropdown-container').removeClass('is-open');
+			
+			$('.dashboard__header-dropdown-toggle span').text($(ev.currentTarget).attr('data-val'));
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -49,6 +62,7 @@
 
 		// callback
 		sidebarCB();
+		dropdownCB();
 		// ==========================================
 	};
 	initNative();

@@ -1,7 +1,5 @@
-
-<!--include ../utilities/_dataForm-->
-<!--include ../utilities/_data--><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html class="is-hideScroll" lang="en">
   <head>
     <!-- META TAGS-->
     <meta charset="utf-8">
@@ -24,12 +22,7 @@
     <link rel="stylesheet" href="css/app.css">
     <!-- STYLE :: END-->
   </head>
-  <body>
-    <!--block header
-    include ../components/_header
-    
-    
-    -->
+  <body class="is-hideScroll">
     <div class="body body--start p-dashboard">
       <!-- SECTION :: START-->
       <section class="dashboard" id="dashboard">
@@ -186,7 +179,9 @@
                     </div>
                   </li>
                   <li>
-                    <div class="dashboard__header-dropdown"><a href="#"><span>NewEpicProject</span><i class="icon-font icon-corner"></i></a></div>
+                    <div class="dashboard__header-dropdown"><a class="dashboard__header-dropdown-toggle" href="#"><span>NewEpicProject</span><i class="icon-font icon-corner"></i></a>
+                      <div class="dashboard__header-dropdown-container"><a href="#" data-val="1">1</a><a href="#" data-val="2">2</a><a href="#" data-val="3">3</a><a href="#" data-val="4">4</a><a href="#" data-val="5">5</a><a href="#" data-val="6">6</a><a href="#" data-val="7">7</a><a href="#" data-val="8">8</a><a href="#" data-val="9">9</a><a href="#" data-val="10">10</a></div>
+                    </div>
                   </li>
                   <li>
                     <div class="dashboard__header-action"><a class="save" href="#"><i class="icon-font icon-save"></i></a><a class="play" href="#"><i class="icon-font icon-play"></i></a></div>
@@ -728,11 +723,6 @@
       </section>
       <!-- SECTION :: END-->
     </div>
-    <!--block footer
-    include ../components/_footer
-    
-    
-    -->
   </body>
   <!-- SCRIPT :: START-->
   <script src="js/vendor.js"></script>

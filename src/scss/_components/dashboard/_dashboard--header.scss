@@ -88,7 +88,7 @@
 
 		&--right {
 			display: flex;
-			padding-left: 20px;
+			padding-left: 30px;
 			padding-right: 20px;
 			border-radius: 0 10px 10px 50px;
 			background-color: #ECEEF3;
@@ -97,13 +97,16 @@
 				display: flex;
 				align-items: center;
 				height: 70px;
-				margin-left: 30px;
 				font-weight: bold;
 				font-size: 14px;
 				line-height: 17px;
 				text-align: center;
 				color: #130F26;
 				@include transition(color);
+
+				&:not(:first-of-type) {
+					margin-left: 30px;
+				}
 
 				&.is-disabled {
 					pointer-events: none;
@@ -175,10 +178,14 @@
 
 	&-dropdown {
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		min-width: 130px;
 
-		a {
+		&-toggle {
 			display: flex;
 			align-items: center;
+			width: 100%;
 
 			span,
 			.icon-font {
@@ -186,6 +193,9 @@
 			}
 
 			span {
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
 				font-weight: 600;
 				font-size: 14px;
 			}
@@ -193,6 +203,53 @@
 			.icon-font {
 				margin-left: 10px;
 				font-size: 14px;
+			}
+		}
+
+		&-container {
+			z-index: 99;
+			overflow: hidden;
+			overflow-y: auto;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-5px);
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			max-height: 180px;
+			padding: 5px 0;
+			border-radius: 10px;
+			box-shadow: 0 4px 50px 0 rgba(18, 30, 49, 0.05);
+			background-color: #FFFFFF;
+			@include transition(opacity, visibility, transform);
+
+			&.is-open {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+				@include transition(opacity, visibility, transform);
+			}
+
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				min-height: 35px;
+				padding-left: 10px;
+				padding-right: 10px;
+				background-color: transparent;
+				font-weight: bold;
+				font-size: 14px;
+				line-height: 17px;
+				text-align: center;
+				color: #130F26;
+				@include transition(background-color);
+
+				&:hover {
+					background-color: #ECEEF3;
+					@include transition(background-color);
+				}
 			}
 		}
 	}

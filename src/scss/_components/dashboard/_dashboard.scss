@@ -4,9 +4,13 @@
 	position: relative;
 
 	&__wrapper {
+		overflow: hidden;
+		overflow-y: auto;
 		display: flex;
-		min-height: 100vh;
-		padding-top: 210px;
+		min-height: calc(100vh - 190px);
+		max-height: calc(100vh - 190px);
+		margin-top: 190px;
+		padding-top: 20px;
 		padding-left: 110px;
 		padding-right: 30px;
 	}
