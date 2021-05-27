@@ -160,4 +160,8 @@ var initPreventBehavior = function initPreventBehavior() {
 		});
 	};
 	initNative();
+
+	$(window).on("load", function () {
+		$(".body").mCustomScrollbar();
+	});
 })();

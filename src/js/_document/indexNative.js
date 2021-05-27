@@ -96,4 +96,8 @@
 		});
 	};
 	initNative();
+	
+	$(window).on("load",function(){
+		$(".body").mCustomScrollbar();
+	});
 })();
