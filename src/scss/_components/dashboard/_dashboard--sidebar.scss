@@ -120,6 +120,7 @@
 				color: rgba(#FFFFFF, 0.5);
 				@include transition(color);
 
+				&.is-active,
 				&:hover {
 					color: #ffffff;
 					@include transition(color);
@@ -143,6 +144,7 @@
 		background-color: transparent;
 		@include transition(background-color);
 
+		&.is-open,
 		&:hover {
 			background-color: #ffffff;
 			@include transition(background-color);

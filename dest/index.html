@@ -17,6 +17,8 @@
     <link rel="manifest" href="/img/favicon/site.webmanifest">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <!-- STYLE :: START-->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/app.css">
@@ -26,7 +28,7 @@
     <div class="body body--start p-dashboard">
       <!-- SECTION :: START-->
       <section class="dashboard" id="dashboard">
-        <div class="dashboard__wrapper">
+        <div class="dashboard__wrapper" data-simplebar>
           <div class="dashboard__sidebar" menu-js>
             <div class="dashboard__sidebar-top">
               <div>
@@ -40,9 +42,9 @@
                 <div class="dashboard__logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
               </div>
             </div>
-            <div class="dashboard__sidebar-bottom">
+            <div class="dashboard__sidebar-bottom" data-simplebar>
               <div class="dashboard__sidebar-collapse">
-                <div>
+                <div class="dashboard__sidebar-collapse-cover">
                   <div class="dashboard__sidebar-collapse-head">
                     <div><a class="dashboard__sidebar-circle" href="#"><i class="icon-font icon-account-framework"></i></a></div>
                     <div><a class="dashboard__sidebar-btn" href="#">
@@ -52,7 +54,7 @@
                     <div><a href="#">Enterprise Core Accounts</a><a href="#">Environment Strategy</a><a href="#">Application Accounts</a><a href="#">Developer Sandbox Acc.</a></div>
                   </div>
                 </div>
-                <div>
+                <div class="dashboard__sidebar-collapse-cover">
                   <div class="dashboard__sidebar-collapse-head">
                     <div><a class="dashboard__sidebar-circle" href="#"><i class="icon-font icon-identity-access"></i></a></div>
                     <div><a class="dashboard__sidebar-btn" href="#">
@@ -62,7 +64,7 @@
                     <div><a href="#">Okta Integration</a><a href="#">ADFS Integration</a><a href="#">AWS SSO Integration</a></div>
                   </div>
                 </div>
-                <div>
+                <div class="dashboard__sidebar-collapse-cover">
                   <div class="dashboard__sidebar-collapse-head">
                     <div><a class="dashboard__sidebar-circle" href="#"><i class="icon-font icon-network"></i></a></div>
                     <div><a class="dashboard__sidebar-btn" href="#">
@@ -72,7 +74,7 @@
                     <div><a href="#">Data Center</a><a href="#">AWS Environment</a><a href="#">VPC Design</a><a href="#">VPC Factory</a><a href="#">Inter-VPC Connectivity</a><a href="#">Cross-region Connectivity</a><a href="#">VPN Connectivity</a><a href="#">DirectConnect</a><a href="#">Traffic Inspection</a><a href="#">VPC Endpoints</a><a href="#">Private DNS</a></div>
                   </div>
                 </div>
-                <div>
+                <div class="dashboard__sidebar-collapse-cover">
                   <div class="dashboard__sidebar-collapse-head">
                     <div><a class="dashboard__sidebar-circle" href="#"><i class="icon-font icon-network"></i></a></div>
                     <div><a class="dashboard__sidebar-btn" href="#">
@@ -82,7 +84,7 @@
                     <div><a href="#">Compliance Management</a><a href="#">Intelligent Threat Detection</a><a href="#">Vulnerability Management</a><a href="#">Endpoint Protection</a><a href="#">Secrets Management</a><a href="#">Perimeter Protection</a><a href="#">SIEM</a></div>
                   </div>
                 </div>
-                <div>
+                <div class="dashboard__sidebar-collapse-cover">
                   <div class="dashboard__sidebar-collapse-head">
                     <div><a class="dashboard__sidebar-circle" href="#"><i class="icon-font icon-infrastructure"></i></a></div>
                     <div><a class="dashboard__sidebar-btn" href="#">
@@ -92,7 +94,7 @@
                     <div><a href="#">Active Directory Integration</a><a href="#">Image Management</a><a href="#">Patch Management</a><a href="#">VDI Solution</a></div>
                   </div>
                 </div>
-                <div>
+                <div class="dashboard__sidebar-collapse-cover">
                   <div class="dashboard__sidebar-collapse-head">
                     <div><a class="dashboard__sidebar-circle" href="#"><i class="icon-font icon-governance"></i></a></div>
                     <div><a class="dashboard__sidebar-btn" href="#">
@@ -102,7 +104,7 @@
                     <div><a href="#">Tagging Strategy</a><a href="#">Service Control Policies</a><a href="#">Config Rules</a><a href="#">Budget Enforcement</a><a href="#">AWS Limits Monitor</a><a href="#">ServiceNow Integration</a></div>
                   </div>
                 </div>
-                <div>
+                <div class="dashboard__sidebar-collapse-cover">
                   <div class="dashboard__sidebar-collapse-head">
                     <div><a class="dashboard__sidebar-circle" href="#"><i class="icon-font icon-monitoring"></i></a></div>
                     <div><a class="dashboard__sidebar-btn" href="#">
@@ -112,7 +114,7 @@
                     <div><a href="#">CloudWatch Rules</a><a href="#">Centralized Logging</a><a href="#">Log Analytics</a><a href="#">Monitoring Tools Integration</a></div>
                   </div>
                 </div>
-                <div>
+                <div class="dashboard__sidebar-collapse-cover">
                   <div class="dashboard__sidebar-collapse-head">
                     <div><a class="dashboard__sidebar-circle" href="#"><i class="icon-font icon-data-protection"></i></a></div>
                     <div><a class="dashboard__sidebar-btn" href="#">
@@ -122,7 +124,7 @@
                     <div><a href="#">Backup & Archive</a><a href="#">Certificate Management</a><a href="#">Key Management</a></div>
                   </div>
                 </div>
-                <div>
+                <div class="dashboard__sidebar-collapse-cover">
                   <div class="dashboard__sidebar-collapse-head">
                     <div><a class="dashboard__sidebar-circle" href="#"><i class="icon-font icon-digital"></i></a></div>
                     <div><a class="dashboard__sidebar-btn" href="#">
@@ -140,7 +142,7 @@
             <div class="dashboard__header-top">
               <div class="dashboard__header-top--left">
                 <div class="dashboard__logo dashboard__logo--sublogo"><a href="#"><img src="img/sublogo.svg" alt=""></a></div>
-                <div class="dashboard__logo"><a href="#"><img src="img/logo-color.svg" alt=""></a></div>
+                <div class="dashboard__logo dashboard__logo--header"><a href="#"><img src="img/logo-color.svg" alt=""></a></div>
               </div>
               <div class="dashboard__header-top--right">
                 <div>
@@ -180,7 +182,7 @@
                   </li>
                   <li>
                     <div class="dashboard__header-dropdown"><a class="dashboard__header-dropdown-toggle" href="#"><span>NewEpicProject</span><i class="icon-font icon-corner"></i></a>
-                      <div class="dashboard__header-dropdown-container"><a href="#" data-val="1">1</a><a href="#" data-val="2">2</a><a href="#" data-val="3">3</a><a href="#" data-val="4">4</a><a href="#" data-val="5">5</a><a href="#" data-val="6">6</a><a href="#" data-val="7">7</a><a href="#" data-val="8">8</a><a href="#" data-val="9">9</a><a href="#" data-val="10">10</a></div>
+                      <div class="dashboard__header-dropdown-container" data-simplebar><a href="#" data-val="1">1</a><a href="#" data-val="2">2</a><a href="#" data-val="3">3</a><a href="#" data-val="4">4</a><a href="#" data-val="5">5</a><a href="#" data-val="6">6</a><a href="#" data-val="7">7</a><a href="#" data-val="8">8</a><a href="#" data-val="9">9</a><a href="#" data-val="10">10</a></div>
                     </div>
                   </li>
                   <li>
