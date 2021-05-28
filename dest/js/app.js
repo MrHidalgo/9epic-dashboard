@@ -80,7 +80,10 @@ var initPreventBehavior = function initPreventBehavior() {
  * ============================================= */
 	var sidebarCB = function sidebarCB() {
 		$('.dashboard__sidebar-circle').on('click', function (ev) {
-			$('[hamburger-js]').trigger('click');
+			if (!$('[hamburger-js]').hasClass('is-active')) {
+				$('[hamburger-js]').trigger('click');
+				$(ev.currentTarget).closest('.dashboard__sidebar-collapse-cover').find('.dashboard__sidebar-btn').trigger('click');
+			}
 		});
 
 		$('.dashboard__sidebar-btn').on('click', function (ev) {

@@ -1871,27 +1871,41 @@ picture {
 }
 
 /* line 52, src/scss/_components/dashboard/_dashboard--block.scss */
+.dashboard__block-header span.refresh .icon-font {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+}
+
+/* line 60, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span.decline {
   background-color: #ed6459;
 }
 
-/* line 56, src/scss/_components/dashboard/_dashboard--block.scss */
+/* line 64, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span .icon-font {
   font-size: 14px;
   color: #ffffff;
 }
 
-/* line 60, src/scss/_components/dashboard/_dashboard--block.scss */
+/* line 68, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span .icon-font.icon-checked {
   font-size: 9px;
 }
 
-/* line 63, src/scss/_components/dashboard/_dashboard--block.scss */
+/* line 71, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-header span .icon-font.icon-close {
   font-size: 10px;
 }
 
-/* line 70, src/scss/_components/dashboard/_dashboard--block.scss */
+/* line 78, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1902,7 +1916,7 @@ picture {
           flex-wrap: wrap;
 }
 
-/* line 75, src/scss/_components/dashboard/_dashboard--block.scss */
+/* line 83, src/scss/_components/dashboard/_dashboard--block.scss */
 .dashboard__block-body .dashboard__box:not(:last-of-type) {
   margin-right: 10px;
 }
@@ -2112,32 +2126,68 @@ picture {
 }
 
 /* line 119, src/scss/_components/dashboard/_dashboard--box.scss */
+.dashboard__box-body ul li span.refresh .icon-font {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+}
+
+/* line 127, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.decline {
   background-color: #ed6459;
 }
 
-/* line 123, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 131, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font {
   font-size: 14px;
   color: #ffffff;
 }
 
-/* line 127, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 135, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font.icon-checked {
   font-size: 9px;
 }
 
-/* line 130, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 138, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font.icon-close {
   font-size: 10px;
 }
 
-/* line 136, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 144, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li p {
   font-weight: bold;
   font-size: 12px;
   text-align: center;
   color: #33325C;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=maps/app.css.map */

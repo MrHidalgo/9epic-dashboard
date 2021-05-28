@@ -48,6 +48,14 @@
 			}
 			&.refresh {
 				background-color: #4097d9;
+
+				.icon-font {
+					animation-duration: 1s;
+					animation-fill-mode: both;
+					animation-timing-function: linear;
+					animation-iteration-count: infinite;
+					animation-name: rotate;
+				}
 			}
 			&.decline {
 				background-color: #ed6459;
