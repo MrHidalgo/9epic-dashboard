@@ -44,7 +44,7 @@
 		top: -30px;
 		right: -30px;
 		width: 200px;
-		padding: 30px 20px 20px 20px;
+		padding: 30px 0 20px 0;
 		border-radius: 20px 0 0 20px;
 		box-shadow: 0 10px 80px 0 rgba(18, 30, 49, 0.05);
 		background-color: #FFFFFF;
@@ -52,6 +52,8 @@
 
 		.dashboard__profile-toggle {
 			justify-content: space-between;
+			padding-left: 20px;
+			padding-right: 20px;
 
 			p {
 				font-size: 18px;
@@ -67,6 +69,8 @@
 	&-info {
 		display: flex;
 		flex-direction: column;
+		padding-left: 20px;
+		padding-right: 20px;
 
 		a {
 			display: flex;
@@ -83,10 +87,12 @@
 	}
 
 	&-line {
-		width: 100%;
+		width: calc(100% - 40px);
 		height: 1px;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
 		background-color: rgba(#33325C, 0.2);
 	}
 
@@ -94,9 +100,19 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
+		min-height: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
+		background-color: transparent;
+		@include transition(background-color);
+
+		&:hover {
+			background-color: #ECEEF3;
+			@include transition(background-color);
+		}
 
 		&:not(:last-of-type) {
-			margin-bottom: 25px;
+			margin-bottom: 10px;
 		}
 
 		&.dashboard__profile-link--admin {

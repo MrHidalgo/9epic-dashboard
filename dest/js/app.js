@@ -111,10 +111,12 @@ var initPreventBehavior = function initPreventBehavior() {
 
 	var dropdownCB = function dropdownCB() {
 		$('.dashboard__header-dropdown-toggle').on('click', function (ev) {
+			$(ev.currentTarget).toggleClass('is-active');
 			$('.dashboard__header-dropdown-container').toggleClass('is-open');
 		});
 
 		$('.dashboard__header-dropdown-container a').on('click', function (ev) {
+			$('.dashboard__header-dropdown-toggle').removeClass('is-active');
 			$('.dashboard__header-dropdown-container').removeClass('is-open');
 
 			$('.dashboard__header-dropdown-toggle span').text($(ev.currentTarget).attr('data-val'));
@@ -147,6 +149,7 @@ var initPreventBehavior = function initPreventBehavior() {
 			var className = ".dashboard__header-dropdown, .dashboard__sidebar";
 
 			if (!$(e.target).closest(className).length) {
+				$('.dashboard__header-dropdown-toggle').removeClass('is-active');
 				$('.dashboard__header-dropdown-container').removeClass('is-open');
 
 				// SIDEBAR

@@ -181,6 +181,16 @@
 			.icon-font {
 				display: none;
 				font-size: 16px;
+
+				&.icon-success {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 17px;
+					height: 17px;
+					border: 3px solid #00B94F;
+					border-radius: 4px;
+				}
 			}
 		}
 
@@ -264,6 +274,13 @@
 			width: 100%;
 			min-height: 35px;
 
+			&.is-active {
+				.icon-font {
+					transform: scaleY(-1);
+					@include transition(transform);
+				}
+			}
+
 			span,
 			.icon-font {
 				color: #4097D9;
@@ -283,6 +300,8 @@
 			.icon-font {
 				margin-left: 10px;
 				font-size: 14px;
+				transform-origin: center;
+				@include transition(transform);
 			}
 		}
 
@@ -292,13 +311,13 @@
 			overflow-y: auto;
 			opacity: 0;
 			visibility: hidden;
-			transform: translateY(-5px);
+			transform: translate(-50%, -5px);
 			position: absolute;
 			top: 100%;
+			left: 50%;
 			width: 100%;
 			min-width: 165px;
 			max-height: 180px;
-
 			box-shadow: 0 10px 30px 0 rgba(0, 26, 54, 0.2);
 			border-radius: 3px;
 			background-color: #FFFFFF;
@@ -307,30 +326,34 @@
 			&.is-open {
 				opacity: 1;
 				visibility: visible;
-				transform: translateY(0);
+				transform: translate(-50%, 0);
 				@include transition(opacity, visibility, transform);
 			}
 
 			> div {
-				padding: 20px 15px;
+				padding: 10px 0;
 			}
 
 			a {
 				display: flex;
 				align-items: center;
+				min-height: 30px;
+				padding-left: 15px;
+				padding-right: 15px;
 				background-color: transparent;
 				font-weight: 600;
 				font-size: 12px;
 				color: #33325C;
-				@include transition(color);
+				@include transition(background-color, color);
 
-				&:not(:last-of-type) {
-					margin-bottom: 15px;
-				}
+				//&:not(:last-of-type) {
+				//	margin-bottom: 15px;
+				//}
 
 				&:hover {
 					color: #4097D9;
-					@include transition(color);
+					background-color: #ECEEF3;
+					@include transition(background-color, color);
 				}
 			}
 		}

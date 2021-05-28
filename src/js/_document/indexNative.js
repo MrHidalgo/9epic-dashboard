@@ -46,10 +46,12 @@
 	
 	const dropdownCB = () => {
 		$('.dashboard__header-dropdown-toggle').on('click', (ev) => {
+			$(ev.currentTarget).toggleClass('is-active');
 			$('.dashboard__header-dropdown-container').toggleClass('is-open');
 		});
 		
 		$('.dashboard__header-dropdown-container a').on('click', (ev) => {
+			$('.dashboard__header-dropdown-toggle').removeClass('is-active');
 			$('.dashboard__header-dropdown-container').removeClass('is-open');
 			
 			$('.dashboard__header-dropdown-toggle span').text($(ev.currentTarget).attr('data-val'));
@@ -83,6 +85,7 @@
 			const className = ".dashboard__header-dropdown, .dashboard__sidebar";
 			
 			if (!$(e.target).closest(className).length) {
+				$('.dashboard__header-dropdown-toggle').removeClass('is-active');
 				$('.dashboard__header-dropdown-container').removeClass('is-open');
 				
 				// SIDEBAR
