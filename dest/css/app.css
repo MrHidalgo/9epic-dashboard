@@ -480,6 +480,29 @@ picture {
   height: 100%;
 }
 
+/* CUSTOM SCROLLBAR */
+/* line 4, src/scss/_shared/_common.scss */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* line 9, src/scss/_shared/_common.scss */
+::-webkit-scrollbar {
+  width: 5px;
+  -webkit-border-radius: 2rem;
+          border-radius: 2rem;
+  background-color: transparent;
+}
+
+/* line 15, src/scss/_shared/_common.scss */
+::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(0, 0, 0, 0.35);
+  -webkit-border-radius: 2rem;
+          border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* end :: CUSTOM SCROLLBAR */
 /* line 1, src/scss/_shared/_iconFont.scss */
 .icon-font {
   display: -webkit-box;
