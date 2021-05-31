@@ -5,13 +5,13 @@
 
     .dashboard__header-top--left
 
-      .dashboard__logo.dashboard__logo--sublogo
-        a(href="#")
-          img(src="img/sublogo.svg" alt="")
-
       .dashboard__logo.dashboard__logo--header
         a(href="#")
           img(src="img/logo-color.svg" alt="")
+
+      .dashboard__logo.dashboard__logo--sublogo
+        a(href="#")
+          img(src="img/sublogo.svg" alt="")
 
     .dashboard__header-top--right
 
@@ -91,18 +91,18 @@
         li
 
           .dashboard__header-action
-            a.save(href="#")
+            a.save.is-disabled(href="#")
               i.icon-font.icon-save
             a.play(href="#")
               i.icon-font.icon-play
 
     .dashboard__header-bottom--right
 
-      a(href="#") Plan
+      a.is-disabled(href="#") Plan
       a(href="#") Design
       a(href="#") Build
       a(href="#") Configure
-      a.is-disabled(href="#") Validate
+      a.is-active(href="#") Validate
 
 
   // INFO

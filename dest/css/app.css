@@ -502,14 +502,14 @@ picture {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: -webkit-calc(100vh - 250px);
-  min-height: calc(100vh - 250px);
-  max-height: -webkit-calc(100vh - 250px);
-  max-height: calc(100vh - 250px);
-  margin-top: 250px;
+  min-height: -webkit-calc(100vh - 230px);
+  min-height: calc(100vh - 230px);
+  max-height: -webkit-calc(100vh - 230px);
+  max-height: calc(100vh - 230px);
+  margin-top: 230px;
   padding-top: 20px;
-  padding-left: 110px;
-  padding-right: 30px;
+  padding-left: 100px;
+  padding-right: 20px;
 }
 
 /* line 18, src/scss/_components/dashboard/_dashboard.scss */
@@ -522,16 +522,18 @@ picture {
 
 /* line 21, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo.dashboard__logo--sublogo {
+  pointer-events: none;
   max-width: 110px;
-  margin-right: 30px;
 }
 
 /* line 25, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo.dashboard__logo--header {
+  pointer-events: none;
   max-width: 65px;
+  margin-right: 30px;
 }
 
-/* line 30, src/scss/_components/dashboard/_dashboard.scss */
+/* line 32, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -543,7 +545,7 @@ picture {
           align-items: flex-start;
 }
 
-/* line 34, src/scss/_components/dashboard/_dashboard.scss */
+/* line 36, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo a img {
   display: block;
   max-width: 100%;
@@ -921,7 +923,7 @@ picture {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  padding: 20px 30px 20px 110px;
+  padding: 15px 20px 20px 100px;
   background-color: #F9F9F9;
 }
 
@@ -951,7 +953,7 @@ picture {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 /* line 28, src/scss/_components/dashboard/_dashboard--header.scss */
@@ -1122,6 +1124,11 @@ picture {
 }
 
 /* line 122, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-bottom--right a.is-active {
+  color: #4097d9;
+}
+
+/* line 126, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-bottom--right a:hover {
   color: #4097D9;
   -webkit-transition: color 0.3s ease-in-out;
@@ -1129,7 +1136,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 130, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 134, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1147,7 +1154,7 @@ picture {
           border-radius: 10px;
 }
 
-/* line 139, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 143, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1160,18 +1167,18 @@ picture {
           flex-direction: column;
 }
 
-/* line 144, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 148, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info.is-error {
   background-color: rgba(237, 36, 20, 0.1);
 }
 
-/* line 147, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 151, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info.is-error .icon-font,
 .dashboard__header-info.is-error p {
   color: #ed2414;
 }
 
-/* line 151, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 155, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info.is-error .icon-font.icon-warning {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1179,18 +1186,18 @@ picture {
   display: flex;
 }
 
-/* line 155, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 159, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info.is-success {
   background-color: rgba(0, 185, 79, 0.1);
 }
 
-/* line 158, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 162, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info.is-success .icon-font,
 .dashboard__header-info.is-success p {
   color: #00b94f;
 }
 
-/* line 162, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 166, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info.is-success .icon-font.icon-success {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1198,18 +1205,18 @@ picture {
   display: flex;
 }
 
-/* line 166, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 170, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info.is-info {
   background-color: rgba(64, 151, 217, 0.1);
 }
 
-/* line 169, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 173, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info.is-info .icon-font,
 .dashboard__header-info.is-info p {
   color: #4097d9;
 }
 
-/* line 173, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 177, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info.is-info .icon-font.icon-info {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1217,18 +1224,18 @@ picture {
   display: flex;
 }
 
-/* line 178, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 182, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info-left {
   width: 16px;
 }
 
-/* line 181, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 185, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info-left .icon-font {
   display: none;
   font-size: 16px;
 }
 
-/* line 185, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 189, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info-left .icon-font.icon-success {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1249,7 +1256,7 @@ picture {
           border-radius: 4px;
 }
 
-/* line 197, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 201, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info-right {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1260,14 +1267,14 @@ picture {
   padding-left: 20px;
 }
 
-/* line 203, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 207, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-info-right p {
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.01em;
 }
 
-/* line 211, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 215, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1280,7 +1287,7 @@ picture {
   margin-right: 50px;
 }
 
-/* line 216, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 220, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1292,18 +1299,18 @@ picture {
           align-items: center;
 }
 
-/* line 220, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 224, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option a:not(:last-of-type) {
   margin-right: 15px;
 }
 
-/* line 224, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 228, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-option a .icon-font {
   font-size: 20px;
   color: #4D508F;
 }
 
-/* line 231, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 235, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1316,7 +1323,7 @@ picture {
   height: 40px;
 }
 
-/* line 236, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 240, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-list li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1329,14 +1336,14 @@ picture {
   height: 100%;
 }
 
-/* line 241, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 245, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-list li:not(:last-of-type) {
   padding-right: 20px;
   margin-right: 20px;
   border-right: 1px solid rgba(99, 107, 115, 0.1);
 }
 
-/* line 249, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 253, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1357,7 +1364,7 @@ picture {
   background-color: rgba(16, 189, 106, 0.1);
 }
 
-/* line 258, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 262, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-label p {
   font-weight: 600;
   font-size: 14px;
@@ -1365,7 +1372,7 @@ picture {
   color: #10BD6A;
 }
 
-/* line 266, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 270, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown {
   position: relative;
   display: -webkit-box;
@@ -1379,7 +1386,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 271, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 275, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1393,7 +1400,7 @@ picture {
   min-height: 35px;
 }
 
-/* line 278, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 282, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle.is-active .icon-font {
   -webkit-transform: scaleY(-1);
       -ms-transform: scaleY(-1);
@@ -1405,13 +1412,13 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 284, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 288, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle span,
 .dashboard__header-dropdown-toggle .icon-font {
   color: #4097D9;
 }
 
-/* line 289, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 293, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle span {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -1427,7 +1434,7 @@ picture {
   font-size: 14px;
 }
 
-/* line 300, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 304, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle .icon-font {
   margin-left: 10px;
   font-size: 14px;
@@ -1441,7 +1448,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 308, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 312, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container {
   z-index: 99;
   overflow: hidden;
@@ -1469,7 +1476,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 326, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 330, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container.is-open {
   opacity: 1;
   visibility: visible;
@@ -1483,12 +1490,12 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 333, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 337, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container > div {
   padding: 10px 0;
 }
 
-/* line 337, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 341, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1510,7 +1517,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 353, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 357, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container a:hover {
   color: #4097D9;
   background-color: #ECEEF3;
@@ -1519,7 +1526,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 362, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 366, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1531,7 +1538,7 @@ picture {
           align-items: center;
 }
 
-/* line 366, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 370, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1545,32 +1552,43 @@ picture {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-/* line 371, src/scss/_components/dashboard/_dashboard--header.scss */
-.dashboard__header-action a.save {
-  font-size: 20px;
-  color: rgba(18, 30, 49, 0.5);
-}
-
-/* line 376, src/scss/_components/dashboard/_dashboard--header.scss */
-.dashboard__header-action a.play {
   width: 30px;
   height: 30px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+}
+
+/* line 378, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-action a.save {
+  font-size: 20px;
+  color: #4097d9;
+}
+
+/* line 383, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-action a.play {
   background-color: #4097d9;
 }
 
-/* line 382, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 386, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-action a.play.is-disabled {
+  background-color: rgba(18, 30, 49, 0.5);
+}
+
+/* line 390, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.play .icon-font {
   color: #ffffff;
   font-size: 10px;
 }
 
-/* line 388, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 396, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-action a.is-disabled {
+  pointer-events: none;
+  color: rgba(18, 30, 49, 0.5);
+}
+
+/* line 401, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a:not(:last-of-type) {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 /* line 1, src/scss/_components/dashboard/_dashboard--profile.scss */
@@ -1686,6 +1704,7 @@ picture {
 
 /* line 75, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-info a {
+  pointer-events: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1695,14 +1714,14 @@ picture {
   color: #10BD6A;
 }
 
-/* line 81, src/scss/_components/dashboard/_dashboard--profile.scss */
+/* line 82, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-info a:first-of-type {
   margin-bottom: 10px;
   font-size: 12px;
   color: #121E31;
 }
 
-/* line 89, src/scss/_components/dashboard/_dashboard--profile.scss */
+/* line 90, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-line {
   width: -webkit-calc(100% - 40px);
   width: calc(100% - 40px);
@@ -1714,7 +1733,7 @@ picture {
   background-color: rgba(51, 50, 92, 0.2);
 }
 
-/* line 99, src/scss/_components/dashboard/_dashboard--profile.scss */
+/* line 100, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1734,7 +1753,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 109, src/scss/_components/dashboard/_dashboard--profile.scss */
+/* line 110, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link:hover {
   background-color: #ECEEF3;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -1742,29 +1761,29 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 114, src/scss/_components/dashboard/_dashboard--profile.scss */
+/* line 115, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
-/* line 119, src/scss/_components/dashboard/_dashboard--profile.scss */
+/* line 120, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link.dashboard__profile-link--admin .icon-font,
 .dashboard__profile-link.dashboard__profile-link--admin span {
   color: #4097d9;
 }
 
-/* line 125, src/scss/_components/dashboard/_dashboard--profile.scss */
+/* line 126, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link .icon-font {
   font-size: 16px;
   color: #33325c;
 }
 
-/* line 129, src/scss/_components/dashboard/_dashboard--profile.scss */
+/* line 130, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link .icon-font + span {
   padding-left: 10px;
 }
 
-/* line 134, src/scss/_components/dashboard/_dashboard--profile.scss */
+/* line 135, src/scss/_components/dashboard/_dashboard--profile.scss */
 .dashboard__profile-link span {
   font-weight: 600;
   font-size: 14px;
@@ -2032,6 +2051,14 @@ picture {
 }
 
 /* line 56, src/scss/_components/dashboard/_dashboard--box.scss */
+.dashboard__box-body ul li a:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: #33325C;
+}
+
+/* line 63, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a:after {
   content: '';
   opacity: 0;
@@ -2046,7 +2073,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 68, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 75, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a:hover:after {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -2054,47 +2081,47 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 74, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 81, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.green {
   color: #00B94F;
 }
 
-/* line 77, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 84, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.green:after {
   background-color: #00B94F;
 }
 
-/* line 81, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 88, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.gold {
   color: #CB9B29;
 }
 
-/* line 84, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 91, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.gold:after {
   background-color: #CB9B29;
 }
 
-/* line 88, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 95, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.red {
   color: #C14F45;
 }
 
-/* line 91, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 98, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.red:after {
   background-color: #C14F45;
 }
 
-/* line 95, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 102, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.orange {
   color: #F7C142;
 }
 
-/* line 98, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 105, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.orange:after {
   background-color: #F7C142;
 }
 
-/* line 104, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 111, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2115,17 +2142,39 @@ picture {
   margin-bottom: 9px;
 }
 
-/* line 113, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 120, src/scss/_components/dashboard/_dashboard--box.scss */
+.dashboard__box-body ul li span + a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: #33325C;
+}
+
+/* line 132, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.success {
   background-color: #00b94f;
 }
 
-/* line 116, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 135, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.refresh {
   background-color: #4097d9;
 }
 
-/* line 119, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 138, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.refresh .icon-font {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -2139,33 +2188,25 @@ picture {
           animation-name: rotate;
 }
 
-/* line 127, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 146, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.decline {
   background-color: #ed6459;
 }
 
-/* line 131, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 150, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font {
   font-size: 14px;
   color: #ffffff;
 }
 
-/* line 135, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 154, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font.icon-checked {
   font-size: 9px;
 }
 
-/* line 138, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 157, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font.icon-close {
   font-size: 10px;
-}
-
-/* line 144, src/scss/_components/dashboard/_dashboard--box.scss */
-.dashboard__box-body ul li p {
-  font-weight: bold;
-  font-size: 12px;
-  text-align: center;
-  color: #33325C;
 }
 
 @-webkit-keyframes rotate {
