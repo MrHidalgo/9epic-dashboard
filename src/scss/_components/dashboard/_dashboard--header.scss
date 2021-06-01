@@ -334,7 +334,7 @@
 				@include transition(opacity, visibility, transform);
 			}
 
-			> div {
+			&-cover {
 				padding: 10px 0;
 			}
 

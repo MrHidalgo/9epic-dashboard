@@ -104,4 +104,9 @@
 		});
 	};
 	initNative();
+	
+	//The passed argument has to be at least a empty object or a object with your desired options
+	$(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container").overlayScrollbars({
+		className : "os-theme-dark"
+	});
 })();
