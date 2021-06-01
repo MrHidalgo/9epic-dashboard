@@ -503,6 +503,123 @@ picture {
 }
 
 /* end :: CUSTOM SCROLLBAR */
+/* POPPER */
+/* line 24, src/scss/_shared/_common.scss */
+.c-popper {
+  position: relative;
+}
+
+/* line 28, src/scss/_shared/_common.scss */
+.c-popper:hover .c-poppertext {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1000;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* line 36, src/scss/_shared/_common.scss */
+.c-popper .c-poppertext {
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  min-width: 80px;
+  max-width: 220px;
+  padding-top: 10px;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* line 50, src/scss/_shared/_common.scss */
+.c-popper .c-poppertext.c-poppertext--info {
+  min-width: unset;
+  max-width: unset;
+}
+
+/* line 54, src/scss/_shared/_common.scss */
+.c-popper .c-poppertext.c-poppertext--info u {
+  white-space: nowrap;
+  min-height: unset;
+  padding: 3px 5px;
+  border-color: #111a30;
+  background-color: #111a30;
+  color: #ffffff !important;
+  font-size: 10px;
+}
+
+/* line 63, src/scss/_shared/_common.scss */
+.c-popper .c-poppertext.c-poppertext--info u:after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #111a30 transparent;
+}
+
+/* line 78, src/scss/_shared/_common.scss */
+.c-popper .c-poppertext > u {
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  min-height: 29px;
+  padding: 10px 15px;
+  border-width: 1px;
+  border-color: #a0c2f9;
+  border-style: solid;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.14);
+          box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.14);
+  text-decoration: none;
+  color: #303030;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* line 95, src/scss/_shared/_common.scss */
+.c-popper .c-poppertext > u .c-btn {
+  width: 100%;
+  min-width: unset;
+  height: 32px;
+}
+
+/* line 100, src/scss/_shared/_common.scss */
+.c-popper .c-poppertext > u .c-btn span {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+/* line 105, src/scss/_shared/_common.scss */
+.c-popper .c-poppertext > u .c-btn .icon-font {
+  margin-right: 0;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+/* line 111, src/scss/_shared/_common.scss */
+.c-popper .c-poppertext > u .c-btn__wrapper {
+  width: 100%;
+  padding-top: 5px;
+}
+
+/* end :: POPPER */
 /* line 1, src/scss/_shared/_iconFont.scss */
 .icon-font {
   display: -webkit-box;

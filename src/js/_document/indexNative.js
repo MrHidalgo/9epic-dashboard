@@ -10,6 +10,8 @@
 			if(!$('[hamburger-js]').hasClass('is-active')) {
 				$('[hamburger-js]').trigger('click');
 				$(ev.currentTarget).closest('.dashboard__sidebar-collapse-cover').find('.dashboard__sidebar-btn').trigger('click');
+			} else {
+				$(ev.currentTarget).closest('.dashboard__sidebar-collapse-cover').find('.dashboard__sidebar-btn').trigger('click');
 			}
 		});
 		
