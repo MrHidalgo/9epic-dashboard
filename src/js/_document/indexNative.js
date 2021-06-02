@@ -102,17 +102,26 @@
 				$('.dashboard__sidebar-collapse-body').slideUp(350);
 				
 				$('#overlay').fadeOut(500);
+				
+				$('html, body').removeClass('is-hideScroll');
 			}
 		});
 	};
 	initNative();
 	
 	//The passed argument has to be at least a empty object or a object with your desired options
-	$(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container").overlayScrollbars({
-		className : "os-theme-dark",
-		overflowBehavior: {
-			x : "hidden",
-			y : "scroll"
-		}
-	});
+	if($(window).width() >= 768) {
+		$(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container").overlayScrollbars({
+			className : "os-theme-dark",
+			overflowBehavior: {
+				x : "hidden",
+				y : "scroll"
+			}
+		});
+	}
 })();
+
+
+$(window).on('load', () => {
+	if($(window).width() < 768) {$('html, body').removeClass('is-hideScroll');}
+});

@@ -2,6 +2,9 @@
 	display: flex;
 	flex-direction: column;
 	padding-top: 15px;
+	@include adaptive(767) {
+		//width: 100%;
+	}
 
 	&-header {
 		display: flex;
@@ -28,20 +31,52 @@
 		ul {
 			display: flex;
 			align-items: flex-start;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+				//justify-content: space-between;
+				//padding-left: 20px;
+				//padding-right: 20px;
+			}
 
 			li {
+				position: relative;
 				display: flex;
 				align-items: center;
 				flex-direction: column;
 				min-width: 70px;
+				@include adaptive(767) {
+					//width: 100%;
+					//min-width: unset;
+					//max-width: calc(100% / 2);
+				}
 
 				&.empty {
-					width: 1px;
-					height: 40px;
-					min-width: 1px;
-					margin-left: 15px;
-					margin-right: 15px;
-					background-color: rgba(#121E31, 0.1);
+					//width: 1px;
+					//height: 40px;
+					//min-width: 1px;
+					//margin-left: 15px;
+					//margin-right: 15px;
+					//background-color: rgba(#121E31, 0.1);
+					//@include adaptive(767) {
+					//	display: none;
+					//}
+				}
+
+				&:not(:last-of-type) {
+					margin-right: 40px;
+					//@include adaptive(767) {
+					//	margin-right: 0;
+					//}
+
+					&:after {
+						content: '';
+						position: absolute;
+						top: 6px;
+						right: -20px;
+						width: 1px;
+						height: 40px;
+						background-color: rgba(#121E31, 0.1);
+					}
 				}
 
 				a {

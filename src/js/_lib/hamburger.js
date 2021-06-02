@@ -37,9 +37,17 @@ const initHamburger = () => {
 					
 					$('.dashboard__subheader .hamburger').removeClass('is-active');
 					$('#overlay').fadeOut(500);
+					
+					if($(window).width() < 768) {
+						$('html, body').removeClass('is-hideScroll');
+					}
 				} else {
 					elem.classList.add("is-active");
 					mobileContainer.classList.add("is-open");
+					
+					if($(window).width() < 768) {
+						$('html, body').addClass('is-hideScroll');
+					}
 					
 					setTimeout(() => {
 						$('.dashboard__sidebar-btn').fadeIn(500);

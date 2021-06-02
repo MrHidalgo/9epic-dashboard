@@ -50,9 +50,17 @@ var initHamburger = function initHamburger() {
 
 					$('.dashboard__subheader .hamburger').removeClass('is-active');
 					$('#overlay').fadeOut(500);
+
+					if ($(window).width() < 768) {
+						$('html, body').removeClass('is-hideScroll');
+					}
 				} else {
 					elem.classList.add("is-active");
 					mobileContainer.classList.add("is-open");
+
+					if ($(window).width() < 768) {
+						$('html, body').addClass('is-hideScroll');
+					}
 
 					setTimeout(function () {
 						$('.dashboard__sidebar-btn').fadeIn(500);
@@ -178,17 +186,27 @@ var initPreventBehavior = function initPreventBehavior() {
 				$('.dashboard__sidebar-collapse-body').slideUp(350);
 
 				$('#overlay').fadeOut(500);
+
+				$('html, body').removeClass('is-hideScroll');
 			}
 		});
 	};
 	initNative();
 
 	//The passed argument has to be at least a empty object or a object with your desired options
-	$(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container").overlayScrollbars({
-		className: "os-theme-dark",
-		overflowBehavior: {
-			x: "hidden",
-			y: "scroll"
-		}
-	});
+	if ($(window).width() >= 768) {
+		$(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container").overlayScrollbars({
+			className: "os-theme-dark",
+			overflowBehavior: {
+				x: "hidden",
+				y: "scroll"
+			}
+		});
+	}
 })();
+
+$(window).on('load', function () {
+	if ($(window).width() < 768) {
+		$('html, body').removeClass('is-hideScroll');
+	}
+});

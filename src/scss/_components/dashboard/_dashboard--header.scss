@@ -12,6 +12,11 @@
 		padding-top: 80px;
 		padding-left: 20px;
 	}
+	@include adaptive(767) {
+		position: relative;
+		padding: 0 0 20px;
+		margin-bottom: 20px;
+	}
 
 	&:after {
 		content: '';
@@ -24,6 +29,10 @@
 		@include adaptive(1279) {
 			left: 20px;
 			width: calc(100% - 40px);
+		}
+		@include adaptive(767) {
+			left: 0;
+			width: 100%;
 		}
 	}
 
@@ -112,6 +121,10 @@
 			@include adaptive(1279) {
 				padding-left: 20px;
 			}
+			@include adaptive(767) {
+				height: 50px;
+				padding: 5px 15px;
+			}
 		}
 
 		&--right {
@@ -122,6 +135,10 @@
 			background-color: #ECEEF3;
 			@include adaptive(1023) {
 				border-radius: 0 0 10px 10px;
+			}
+			@include adaptive(767) {
+				padding: 0 15px;
+				justify-content: space-between;
 			}
 
 			a {
@@ -134,6 +151,11 @@
 				text-align: center;
 				color: #130F26;
 				@include transition(color);
+				@include adaptive(767) {
+					height: 50px;
+					font-size: 12px;
+					line-height: normal;
+				}
 
 				&:not(:first-of-type) {
 					margin-left: 30px;
@@ -164,6 +186,10 @@
 		padding: 10px 20px;
 		margin-top: 20px;
 		border-radius: 10px;
+		@include adaptive(767) {
+			height: auto;
+			padding: 15px;
+		}
 
 		&-wrapper {
 			display: flex;
@@ -271,6 +297,16 @@
 				padding-right: 20px;
 				margin-right: 20px;
 				border-right: 1px solid rgba(#636B73, 0.1);
+				@include adaptive(767) {
+					padding-right: 10px;
+					margin-right: 10px;
+				}
+			}
+
+			&:last-of-type {
+				@include adaptive(767) {
+					margin-left: auto;
+				}
 			}
 		}
 	}
@@ -283,6 +319,11 @@
 		height: 40px;
 		border-radius: 2rem;
 		background-color: rgba(#10BD6A, 0.1);
+		@include adaptive(767) {
+			width: auto;
+			min-width: 70px;
+			height: 30px;
+		}
 
 		p {
 			font-weight: 600;
@@ -324,6 +365,9 @@
 				max-width: 110px;
 				font-weight: 600;
 				font-size: 14px;
+				@include adaptive(767) {
+					font-size: 12px;
+				}
 			}
 
 			.icon-font {
@@ -399,10 +443,17 @@
 			width: 30px;
 			height: 30px;
 			border-radius: 50%;
+			@include adaptive(767) {
+				width: 24px;
+				height: 24px;
+			}
 
 			&.save {
 				font-size: 20px;
 				color: #4097d9;
+				@include adaptive(767) {
+					font-size: 16px;
+				}
 			}
 
 			&.play {
@@ -425,6 +476,9 @@
 
 			&:not(:last-of-type) {
 				margin-right: 20px;
+				@include adaptive(767) {
+					margin-right: 10px;
+				}
 			}
 		}
 	}

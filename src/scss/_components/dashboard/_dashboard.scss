@@ -24,6 +24,12 @@
 			max-height: calc(100vh - 310px);
 			margin-top: 310px;
 		}
+		@include adaptive(767) {
+			flex-direction: column;
+			min-height: unset;
+			max-height: unset;
+			margin-top: 60px;
+		}
 	}
 
 	&__logo {

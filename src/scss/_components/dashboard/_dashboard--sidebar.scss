@@ -45,6 +45,9 @@
 			}
 		}
 	}
+	@include adaptive(767) {
+		width: 280px !important;
+	}
 
 	&.is-open {
 		@include respondCustom('(min-width: 1280px)') {
@@ -77,9 +80,17 @@
 		justify-content: space-between;
 		height: 100px;
 		padding: 15px;
+		@include adaptive(767) {
+			height: auto;
+			padding: 20px 40px 30px 15px;
+		}
 
 		.dashboard__logo {
 			display: none;
+			@include adaptive(767) {
+				display: flex;
+				max-width: 57px;
+			}
 		}
 
 		.hamburger {
@@ -91,6 +102,9 @@
 			margin-left: 9px;
 			border-radius: 10px;
 			@include transition(background-color);
+			@include adaptive(767) {
+				margin-left: 0;
+			}
 
 			.hamburger-box {
 				transform-origin: center;
@@ -129,6 +143,9 @@
 			> div {
 				&:nth-of-type(1) {
 					width: 50px;
+					@include adaptive(767) {
+						width: 35px;
+					}
 				}
 				&:nth-of-type(2) {
 					display: flex;
@@ -146,6 +163,9 @@
 
 			> div {
 				flex-direction: column;
+				@include adaptive(767) {
+					padding-top: 5px;
+				}
 			}
 
 			a {
@@ -154,6 +174,9 @@
 				font-size: 14px;
 				color: rgba(#FFFFFF, 0.5);
 				@include transition(color);
+				@include adaptive(767) {
+					font-size: 12px;
+				}
 
 				&.is-active,
 				&:hover {
@@ -178,6 +201,10 @@
 		border: 2px solid #FFFFFF;
 		background-color: transparent;
 		@include transition(background-color);
+		@include adaptive(767) {
+			width: 35px;
+			height: 35px;
+		}
 
 		&.is-open,
 		&:hover {
@@ -194,6 +221,9 @@
 			color: #ffffff;
 			font-size: 20px;
 			@include transition(color);
+			@include adaptive(767) {
+				font-size: 14px;
+			}
 
 			&.icon-account-framework,
 			&.icon-identity-access,
@@ -201,6 +231,9 @@
 			&.icon-data-protection,
 			&.icon-digital {
 				font-size: 16px;
+				@include adaptive(767) {
+					font-size: 12px;
+				}
 			}
 		}
 	}
@@ -225,6 +258,9 @@
 			font-weight: 600;
 			font-size: 20px;
 			color: #FFFFFF;
+			@include adaptive(767) {
+				font-size: 16px;
+			}
 
 			&:before,
 			&:after {
