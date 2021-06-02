@@ -87,7 +87,7 @@
 		// ==========================================
 		
 		$('body').on('click', function (e) {
-			const className = ".dashboard__header-dropdown, .dashboard__sidebar";
+			const className = ".dashboard__header-dropdown, .dashboard__sidebar, .dashboard__subheader .hamburger";
 			
 			if (!$(e.target).closest(className).length) {
 				$('.dashboard__header-dropdown-toggle').removeClass('is-active');
@@ -100,6 +100,8 @@
 				$('.dashboard__sidebar .dashboard__logo').hide();
 				$('.dashboard__sidebar-btn').removeClass('is-active');
 				$('.dashboard__sidebar-collapse-body').slideUp(350);
+				
+				$('#overlay').fadeOut(500);
 			}
 		});
 	};
@@ -107,6 +109,10 @@
 	
 	//The passed argument has to be at least a empty object or a object with your desired options
 	$(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container").overlayScrollbars({
-		className : "os-theme-dark"
+		className : "os-theme-dark",
+		overflowBehavior: {
+			x : "hidden",
+			y : "scroll"
+		}
 	});
 })();

@@ -1,0 +1,41 @@
+.dashboard__subheader
+
+  .dashboard__subheader-left
+
+    +hamburger
+
+  .dashboard__subheader-middle
+
+    .dashboard__header-bottom--left
+
+      p Validation
+      div
+        img(src="img/logo-aws.svg" alt="")
+
+  .dashboard__subheader-right
+
+    .dashboard__profile
+      a.dashboard__profile-toggle(href="#")
+        div
+          img(src="img/img-user.png" alt="")
+      .dashboard__profile-dropdown
+        .dashboard__profile-toggle
+          p Ryan M
+          div
+            img(src="img/img-user.png" alt="")
+        .dashboard__profile-info
+          a(href="mailto:ryan@epic9.io") ryan@epic9.io
+          a(href="#") Epic9
+        .dashboard__profile-line
+        div
+          a.dashboard__profile-link(href="#")
+            i.icon-font.icon-sort
+            span Switch User
+          a.dashboard__profile-link(href="#")
+            i.icon-font.icon-exit
+            span Sign out
+        .dashboard__profile-line
+        div
+          a.dashboard__profile-link.dashboard__profile-link--admin(href="#")
+            i.icon-font.icon-profile
+            span Admin

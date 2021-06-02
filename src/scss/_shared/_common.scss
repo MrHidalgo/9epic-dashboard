@@ -1,22 +1,17 @@
 // COMMON :: START
 
 /* CUSTOM SCROLLBAR */
-//::-webkit-scrollbar-track {
-//	//-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.15);
-//	background-color: transparent;
-//}
-//
-//::-webkit-scrollbar {
-//	width: 5px;
-//	border-radius: 2rem;
-//	background-color: transparent;
-//}
-//
-//::-webkit-scrollbar-thumb {
-//	border: 2px solid rgba(#000000, 0.35);
-//	border-radius: 2rem;
-//	background-color: rgba(#000000, 0.35);
-//}
+.os-scrollbar-track {
+	width: 1px !important;
+	background-color: rgba(#121E31, 0.2) !important;
+	border-radius: 0 !important;
+}
+.os-scrollbar-handle {
+	left: -2px;
+	width: 5px !important;
+	background-color: #121E31 !important;
+	border-radius: 3px !important;
+}
 /* end :: CUSTOM SCROLLBAR */
 
 
@@ -119,5 +114,19 @@
 
 /* end :: POPPER */
 
+/* OVERLAY */
+.overlay {
+	z-index: 155;
+	overflow: hidden;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(51, 50, 92, 0.2);
+	backdrop-filter: blur(2px);
+}
+/* end :: OVERLAY */
 
 // COMMON :: END

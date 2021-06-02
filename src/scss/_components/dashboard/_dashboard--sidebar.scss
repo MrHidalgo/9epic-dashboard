@@ -12,12 +12,18 @@
 	box-shadow: 10px 0 50px 0 rgba(18, 30, 49, 0);
 	background: linear-gradient(179.92deg, #4097D9 -23.94%, #30C4A0 53.12%, #00B94F 120.74%);
 	@include transition(width, border-radius, box-shadow);
-
-	&.is-open {
-		width: 400px;
+	@include adaptive(1279) {
+		z-index: 199;
+		transform: translateX(-100%);
+		width: 350px !important;
 		border-radius: 0 40px 40px 0;
 		box-shadow: 10px 0px 50px rgba(18, 30, 49, 0.2);
-		@include transition(width, border-radius, box-shadow);
+		@include transition(transform);
+
+		&.is-open {
+			transform: translateX(0);
+			@include transition(transform);
+		}
 
 		.c-poppertext {
 			display: none !important;
@@ -31,6 +37,35 @@
 				.hamburger-box {
 					transform: scale(0.55);
 					@include transition(transform);
+				}
+			}
+
+			.dashboard__logo {
+				display: flex !important;
+			}
+		}
+	}
+
+	&.is-open {
+		@include respondCustom('(min-width: 1280px)') {
+			width: 400px;
+			border-radius: 0 40px 40px 0;
+			box-shadow: 10px 0px 50px rgba(18, 30, 49, 0.2);
+			@include transition(width, border-radius, box-shadow);
+
+			.c-poppertext {
+				display: none !important;
+			}
+
+			.dashboard__sidebar-top {
+				.hamburger {
+					background-color: rgba(#FFFFFF, 0.1);
+					@include transition(background-color);
+
+					.hamburger-box {
+						transform: scale(0.55);
+						@include transition(transform);
+					}
 				}
 			}
 		}
