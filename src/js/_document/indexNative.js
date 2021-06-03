@@ -9,9 +9,15 @@
 		$('.dashboard__sidebar-circle').on('click', (ev) => {
 			if(!$('[hamburger-js]').hasClass('is-active')) {
 				$('[hamburger-js]').trigger('click');
-				$(ev.currentTarget).closest('.dashboard__sidebar-collapse-cover').find('.dashboard__sidebar-btn').trigger('click');
+				$(ev.currentTarget)
+					.closest('.dashboard__sidebar-collapse-cover')
+					.find('.dashboard__sidebar-btn')
+					.trigger('click');
 			} else {
-				$(ev.currentTarget).closest('.dashboard__sidebar-collapse-cover').find('.dashboard__sidebar-btn').trigger('click');
+				$(ev.currentTarget)
+					.closest('.dashboard__sidebar-collapse-cover')
+					.find('.dashboard__sidebar-btn')
+					.trigger('click');
 			}
 		});
 		
@@ -96,32 +102,40 @@
 				// SIDEBAR
 				$('[hamburger-js]').removeClass("is-active");
 				$('[menu-js]').removeClass("is-open");
-				$('.dashboard__sidebar-btn').hide();
+				
+				$('.dashboard__sidebar-btn').hide().removeClass('is-active');
 				$('.dashboard__sidebar .dashboard__logo').hide();
-				$('.dashboard__sidebar-btn').removeClass('is-active');
 				$('.dashboard__sidebar-collapse-body').slideUp(350);
 				
 				$('#overlay').fadeOut(500);
-				
-				$('html, body').removeClass('is-hideScroll');
 			}
 		});
 	};
-	initNative();
 	
-	//The passed argument has to be at least a empty object or a object with your desired options
-	if($(window).width() >= 768) {
-		$(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container").overlayScrollbars({
-			className : "os-theme-dark",
-			overflowBehavior: {
-				x : "hidden",
-				y : "scroll"
-			}
-		});
-	}
+	initNative();
 })();
 
+function helperCalcScrollNodeHeight() {
+	$('.dashboard__wrapper').css({
+		'minHeight': 'calc(100vh - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
+		'maxHeight': 'calc(100vh - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
+		'marginTop': Number($('.dashboard__header').outerHeight(true)),
+	});
+}
 
 $(window).on('load', () => {
-	if($(window).width() < 768) {$('html, body').removeClass('is-hideScroll');}
+	helperCalcScrollNodeHeight();
+	
+	OverlayScrollbars($(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container"), {
+		className : "os-theme-dark",
+		autoUpdate: true,
+		overflowBehavior: {
+			x : "hidden",
+			y : "scroll"
+		}
+	});
+});
+
+$(window).on('resize', () => {
+	helperCalcScrollNodeHeight();
 });

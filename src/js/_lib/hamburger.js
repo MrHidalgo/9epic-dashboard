@@ -20,9 +20,12 @@ const initHamburger = () => {
 			b.addEventListener("click", (ev) => {
 				const elem = ev.currentTarget;
 				
-				if($(elem).closest('.dashboard__subheader')) {
+				if($(elem).closest('.dashboard__subheader').length > 0) {
 					$('.dashboard__sidebar .hamburger').addClass('is-active');
-					$('#overlay').fadeIn(500);
+					
+					if($(window).width() < 1279) {
+						$('#overlay').fadeIn(500);
+					}
 				}
 				
 				if(elem.classList.contains('is-active')) {
@@ -36,19 +39,12 @@ const initHamburger = () => {
 					$('.dashboard__sidebar-collapse-body').slideUp(350);
 					
 					$('.dashboard__subheader .hamburger').removeClass('is-active');
-					$('#overlay').fadeOut(500);
 					
-					if($(window).width() < 768) {
-						$('html, body').removeClass('is-hideScroll');
-					}
+					$('#overlay').fadeOut(500);
 				} else {
 					elem.classList.add("is-active");
 					mobileContainer.classList.add("is-open");
-					
-					if($(window).width() < 768) {
-						$('html, body').addClass('is-hideScroll');
-					}
-					
+
 					setTimeout(() => {
 						$('.dashboard__sidebar-btn').fadeIn(500);
 						$('.dashboard__sidebar .dashboard__logo').fadeIn(500);

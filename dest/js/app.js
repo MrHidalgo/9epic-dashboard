@@ -33,9 +33,12 @@ var initHamburger = function initHamburger() {
 			b.addEventListener("click", function (ev) {
 				var elem = ev.currentTarget;
 
-				if ($(elem).closest('.dashboard__subheader')) {
+				if ($(elem).closest('.dashboard__subheader').length > 0) {
 					$('.dashboard__sidebar .hamburger').addClass('is-active');
-					$('#overlay').fadeIn(500);
+
+					if ($(window).width() < 1279) {
+						$('#overlay').fadeIn(500);
+					}
 				}
 
 				if (elem.classList.contains('is-active')) {
@@ -49,18 +52,11 @@ var initHamburger = function initHamburger() {
 					$('.dashboard__sidebar-collapse-body').slideUp(350);
 
 					$('.dashboard__subheader .hamburger').removeClass('is-active');
-					$('#overlay').fadeOut(500);
 
-					if ($(window).width() < 768) {
-						$('html, body').removeClass('is-hideScroll');
-					}
+					$('#overlay').fadeOut(500);
 				} else {
 					elem.classList.add("is-active");
 					mobileContainer.classList.add("is-open");
-
-					if ($(window).width() < 768) {
-						$('html, body').addClass('is-hideScroll');
-					}
 
 					setTimeout(function () {
 						$('.dashboard__sidebar-btn').fadeIn(500);
@@ -180,33 +176,40 @@ var initPreventBehavior = function initPreventBehavior() {
 				// SIDEBAR
 				$('[hamburger-js]').removeClass("is-active");
 				$('[menu-js]').removeClass("is-open");
-				$('.dashboard__sidebar-btn').hide();
+
+				$('.dashboard__sidebar-btn').hide().removeClass('is-active');
 				$('.dashboard__sidebar .dashboard__logo').hide();
-				$('.dashboard__sidebar-btn').removeClass('is-active');
 				$('.dashboard__sidebar-collapse-body').slideUp(350);
 
 				$('#overlay').fadeOut(500);
-
-				$('html, body').removeClass('is-hideScroll');
 			}
 		});
 	};
-	initNative();
 
-	//The passed argument has to be at least a empty object or a object with your desired options
-	if ($(window).width() >= 768) {
-		$(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container").overlayScrollbars({
-			className: "os-theme-dark",
-			overflowBehavior: {
-				x: "hidden",
-				y: "scroll"
-			}
-		});
-	}
+	initNative();
 })();
 
+function helperCalcScrollNodeHeight() {
+	$('.dashboard__wrapper').css({
+		'minHeight': 'calc(100vh - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
+		'maxHeight': 'calc(100vh - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
+		'marginTop': Number($('.dashboard__header').outerHeight(true))
+	});
+}
+
 $(window).on('load', function () {
-	if ($(window).width() < 768) {
-		$('html, body').removeClass('is-hideScroll');
-	}
+	helperCalcScrollNodeHeight();
+
+	OverlayScrollbars($(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container"), {
+		className: "os-theme-dark",
+		autoUpdate: true,
+		overflowBehavior: {
+			x: "hidden",
+			y: "scroll"
+		}
+	});
+});
+
+$(window).on('resize', function () {
+	helperCalcScrollNodeHeight();
 });

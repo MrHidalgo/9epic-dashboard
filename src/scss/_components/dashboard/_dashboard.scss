@@ -26,9 +26,9 @@
 		}
 		@include adaptive(767) {
 			flex-direction: column;
-			min-height: unset;
-			max-height: unset;
-			margin-top: 60px;
+			min-height: calc(100vh - 310px);
+			max-height: calc(100vh - 310px);
+			margin-top: 310px;
 		}
 	}
 

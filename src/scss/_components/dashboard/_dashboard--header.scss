@@ -13,9 +13,8 @@
 		padding-left: 20px;
 	}
 	@include adaptive(767) {
-		position: relative;
-		padding: 0 0 20px;
 		margin-bottom: 20px;
+		padding-bottom: 20px;
 	}
 
 	&:after {

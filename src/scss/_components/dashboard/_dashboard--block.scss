@@ -9,6 +9,9 @@
 		align-items: flex-start;
 		flex-direction: column;
 		width: 100%;
+		@include adaptive(767) {
+			padding-bottom: 10px;
+		}
 
 		> div {
 			padding-bottom: 20px;
