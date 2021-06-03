@@ -314,24 +314,25 @@ body {
   html,
   body {
     height: -webkit-fill-available;
+    max-height: -webkit-fill-available;
     min-height: unset;
   }
 }
 
-/* line 13, src/scss/_shared/_main-setting-reset.scss */
+/* line 11, src/scss/_shared/_main-setting-reset.scss */
 html.is-hideScroll,
 body.is-hideScroll {
   width: 100%;
   overflow: hidden !important;
 }
 
-/* line 20, src/scss/_shared/_main-setting-reset.scss */
+/* line 18, src/scss/_shared/_main-setting-reset.scss */
 html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 26, src/scss/_shared/_main-setting-reset.scss */
+/* line 24, src/scss/_shared/_main-setting-reset.scss */
 body {
   overflow-x: hidden;
   position: relative;
@@ -346,7 +347,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 40, src/scss/_shared/_main-setting-reset.scss */
+/* line 38, src/scss/_shared/_main-setting-reset.scss */
 body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -360,7 +361,7 @@ body {
   min-height: 100vh;
 }
 
-/* line 45, src/scss/_shared/_main-setting-reset.scss */
+/* line 43, src/scss/_shared/_main-setting-reset.scss */
 body > .body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -381,7 +382,7 @@ body > .body {
           flex: 1 0 auto;
 }
 
-/* line 51, src/scss/_shared/_main-setting-reset.scss */
+/* line 49, src/scss/_shared/_main-setting-reset.scss */
 body > .body--start {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -389,19 +390,19 @@ body > .body--start {
           justify-content: flex-start;
 }
 
-/* line 58, src/scss/_shared/_main-setting-reset.scss */
+/* line 56, src/scss/_shared/_main-setting-reset.scss */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 61, src/scss/_shared/_main-setting-reset.scss */
+/* line 59, src/scss/_shared/_main-setting-reset.scss */
 *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 68, src/scss/_shared/_main-setting-reset.scss */
+/* line 66, src/scss/_shared/_main-setting-reset.scss */
 button,
 input,
 optgroup,
@@ -411,36 +412,36 @@ textarea {
   margin: 0;
 }
 
-/* line 78, src/scss/_shared/_main-setting-reset.scss */
+/* line 76, src/scss/_shared/_main-setting-reset.scss */
 button,
 input {
   overflow: visible;
 }
 
-/* line 84, src/scss/_shared/_main-setting-reset.scss */
+/* line 82, src/scss/_shared/_main-setting-reset.scss */
 button[disabled] {
   opacity: 0.55;
   cursor: not-allowed;
 }
 
-/* line 90, src/scss/_shared/_main-setting-reset.scss */
+/* line 88, src/scss/_shared/_main-setting-reset.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-/* line 96, src/scss/_shared/_main-setting-reset.scss */
+/* line 94, src/scss/_shared/_main-setting-reset.scss */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 102, src/scss/_shared/_main-setting-reset.scss */
+/* line 100, src/scss/_shared/_main-setting-reset.scss */
 textarea {
   overflow: auto;
 }
 
-/* line 107, src/scss/_shared/_main-setting-reset.scss */
+/* line 105, src/scss/_shared/_main-setting-reset.scss */
 p,
 h1, h2, h3, h4, h5, h6,
 hr {
@@ -448,36 +449,36 @@ hr {
   padding: 0;
 }
 
-/* line 115, src/scss/_shared/_main-setting-reset.scss */
+/* line 113, src/scss/_shared/_main-setting-reset.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 120, src/scss/_shared/_main-setting-reset.scss */
+/* line 118, src/scss/_shared/_main-setting-reset.scss */
 ul li {
   list-style: none;
 }
 
-/* line 126, src/scss/_shared/_main-setting-reset.scss */
+/* line 124, src/scss/_shared/_main-setting-reset.scss */
 a {
   outline: none;
   text-decoration: none;
 }
 
-/* line 131, src/scss/_shared/_main-setting-reset.scss */
+/* line 129, src/scss/_shared/_main-setting-reset.scss */
 a:hover, a:focus {
   text-decoration: none;
 }
 
-/* line 138, src/scss/_shared/_main-setting-reset.scss */
+/* line 136, src/scss/_shared/_main-setting-reset.scss */
 input[type="text"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-/* line 142, src/scss/_shared/_main-setting-reset.scss */
+/* line 140, src/scss/_shared/_main-setting-reset.scss */
 picture {
   display: -webkit-box;
   display: -webkit-flex;
@@ -736,6 +737,7 @@ picture {
 
 /* line 49, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo a {
+  pointer-events: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -746,7 +748,7 @@ picture {
           align-items: flex-start;
 }
 
-/* line 53, src/scss/_components/dashboard/_dashboard.scss */
+/* line 54, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__logo a img {
   display: block;
   max-width: 100%;
@@ -1248,6 +1250,11 @@ picture {
 /* line 279, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .dashboard__sidebar-btn p:after {
   right: 50%;
+}
+
+/* line 285, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.dashboard__sidebar .os-scrollbar-handle {
+  background-color: #FFFFFF !important;
 }
 
 /* line 1, src/scss/_components/dashboard/_dashboard--header.scss */
@@ -1819,6 +1826,9 @@ picture {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100px;
+  max-width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
   height: 40px;
   -webkit-border-radius: 2rem;
           border-radius: 2rem;
@@ -1834,15 +1844,19 @@ picture {
   }
 }
 
-/* line 327, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 330, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-label p {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   font-weight: 600;
   font-size: 14px;
   text-align: center;
   color: #10BD6A;
 }
 
-/* line 335, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 341, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown {
   position: relative;
   display: -webkit-box;
@@ -1856,7 +1870,17 @@ picture {
           flex-direction: column;
 }
 
-/* line 340, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 346, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown .os-scrollbar-track {
+  background-color: rgba(18, 30, 49, 0.1) !important;
+}
+
+/* line 349, src/scss/_components/dashboard/_dashboard--header.scss */
+.dashboard__header-dropdown .os-scrollbar-handle {
+  background-color: #4097D9 !important;
+}
+
+/* line 353, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1870,7 +1894,7 @@ picture {
   min-height: 35px;
 }
 
-/* line 347, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 360, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle.is-active .icon-font {
   -webkit-transform: scaleY(-1);
       -ms-transform: scaleY(-1);
@@ -1882,13 +1906,13 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 353, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 366, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle span,
 .dashboard__header-dropdown-toggle .icon-font {
   color: #4097D9;
 }
 
-/* line 358, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 371, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle span {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -1905,13 +1929,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 358, src/scss/_components/dashboard/_dashboard--header.scss */
+  /* line 371, src/scss/_components/dashboard/_dashboard--header.scss */
   .dashboard__header-dropdown-toggle span {
     font-size: 12px;
   }
 }
 
-/* line 372, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 385, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-toggle .icon-font {
   margin-left: 10px;
   font-size: 14px;
@@ -1925,7 +1949,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 380, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 393, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container {
   z-index: 99;
   overflow: hidden;
@@ -1953,7 +1977,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 398, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 411, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container.is-open {
   opacity: 1;
   visibility: visible;
@@ -1967,12 +1991,12 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 405, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 418, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container-cover {
   padding: 10px 0;
 }
 
-/* line 409, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 422, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1994,7 +2018,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 425, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 438, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-dropdown-container a:hover {
   color: #4097D9;
   background-color: #ECEEF3;
@@ -2003,7 +2027,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 434, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 447, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2015,7 +2039,7 @@ picture {
           align-items: center;
 }
 
-/* line 438, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 451, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2036,55 +2060,55 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 438, src/scss/_components/dashboard/_dashboard--header.scss */
+  /* line 451, src/scss/_components/dashboard/_dashboard--header.scss */
   .dashboard__header-action a {
     width: 24px;
     height: 24px;
   }
 }
 
-/* line 450, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 463, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.save {
   font-size: 20px;
   color: #4097d9;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 450, src/scss/_components/dashboard/_dashboard--header.scss */
+  /* line 463, src/scss/_components/dashboard/_dashboard--header.scss */
   .dashboard__header-action a.save {
     font-size: 16px;
   }
 }
 
-/* line 458, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 471, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.play {
   background-color: #4097d9;
 }
 
-/* line 461, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 474, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.play.is-disabled {
   background-color: rgba(18, 30, 49, 0.5);
 }
 
-/* line 465, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 478, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.play .icon-font {
   color: #ffffff;
   font-size: 10px;
 }
 
-/* line 471, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 484, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a.is-disabled {
   pointer-events: none;
   color: rgba(18, 30, 49, 0.5);
 }
 
-/* line 476, src/scss/_components/dashboard/_dashboard--header.scss */
+/* line 489, src/scss/_components/dashboard/_dashboard--header.scss */
 .dashboard__header-action a:not(:last-of-type) {
   margin-right: 20px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 476, src/scss/_components/dashboard/_dashboard--header.scss */
+  /* line 489, src/scss/_components/dashboard/_dashboard--header.scss */
   .dashboard__header-action a:not(:last-of-type) {
     margin-right: 10px;
   }

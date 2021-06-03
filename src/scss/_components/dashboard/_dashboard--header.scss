@@ -315,6 +315,9 @@
 		align-items: center;
 		justify-content: center;
 		width: 100px;
+		max-width: 100px;
+		padding-left: 10px;
+		padding-right: 10px;
 		height: 40px;
 		border-radius: 2rem;
 		background-color: rgba(#10BD6A, 0.1);
@@ -325,6 +328,9 @@
 		}
 
 		p {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 			font-weight: 600;
 			font-size: 14px;
 			text-align: center;
@@ -336,6 +342,13 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
+
+		.os-scrollbar-track {
+			background-color: rgba(#121E31, 0.1) !important;
+		}
+		.os-scrollbar-handle {
+			background-color: #4097D9 !important;
+		}
 
 		&-toggle {
 			display: flex;
