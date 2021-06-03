@@ -3,7 +3,30 @@
 	flex-direction: column;
 	padding-top: 15px;
 	@include adaptive(767) {
-		//width: 100%;
+		align-items: flex-start;
+		width: 100%;
+
+		&.dashboard__box--half {
+			width: calc((100% - 10px) / 2);
+			margin-right: 0 !important;
+
+			& + .dashboard__box--half {
+				margin-left: 10px;
+			}
+
+			.dashboard__box-body {
+				width: 100%;
+				height: 100%;
+
+				ul {
+					justify-content: center;
+
+					li {
+						width: 100%;
+					}
+				}
+			}
+		}
 	}
 
 	&-header {
@@ -27,15 +50,66 @@
 		padding: 15px 20px 10px;
 		border: 1px solid rgba(#121E31, 0.1);
 		border-radius: 10px;
+		@include adaptive(767) {
+		  flex: unset;
+
+			&.is-2 {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+
+				ul {
+					width: 100%;
+
+					li {
+						width: 50%;
+						margin-right: 0 !important;
+
+						&:after {
+							right: 0 !important;
+						}
+					}
+				}
+			}
+			&.is-3,
+			&.is-4,
+			&.is-5 {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+
+				ul {
+					width: 100%;
+
+					li {
+						width: calc(100% / 3);
+						margin-right: 0 !important;
+
+						&:nth-of-type(4),
+						&:nth-of-type(5),
+						&:nth-of-type(6) {
+							margin-top: 10px;
+						}
+
+						&:nth-of-type(3) {
+							&:after {
+								display: none;
+							}
+						}
+
+						&:after {
+							right: 0 !important;
+						}
+					}
+				}
+			}
+		}
 
 		ul {
 			display: flex;
 			align-items: flex-start;
 			@include adaptive(767) {
 				flex-wrap: wrap;
-				//justify-content: space-between;
-				//padding-left: 20px;
-				//padding-right: 20px;
 			}
 
 			li {
@@ -44,29 +118,9 @@
 				align-items: center;
 				flex-direction: column;
 				min-width: 70px;
-				@include adaptive(767) {
-					//width: 100%;
-					//min-width: unset;
-					//max-width: calc(100% / 2);
-				}
-
-				&.empty {
-					//width: 1px;
-					//height: 40px;
-					//min-width: 1px;
-					//margin-left: 15px;
-					//margin-right: 15px;
-					//background-color: rgba(#121E31, 0.1);
-					//@include adaptive(767) {
-					//	display: none;
-					//}
-				}
 
 				&:not(:last-of-type) {
 					margin-right: 40px;
-					//@include adaptive(767) {
-					//	margin-right: 0;
-					//}
 
 					&:after {
 						content: '';

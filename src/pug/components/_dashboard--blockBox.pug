@@ -11,12 +11,11 @@
                 i.icon-font.icon-checked
           .dashboard__block-body
             .dashboard__box
-              .dashboard__box-body
+              .dashboard__box-body.is-2
                 ul
                   li
                     a.green(href="#") 7
                     a(href="#") Accounts
-                  //li.empty
                   li
                     a.green(href="#") 4
                     a(href="#") OUs
@@ -30,12 +29,11 @@
                 i.icon-font.icon-checked
           .dashboard__block-body
             .dashboard__box
-              .dashboard__box-body
+              .dashboard__box-body.is-2
                 ul
                   li
                     a.gold(href="#") 8
                     a(href="#") IdPs
-                  //li.empty
                   li
                     a.red(href="#") 653
                     a(href="#") Roles
@@ -51,24 +49,20 @@
         .dashboard__box
           .dashboard__box-header
             p Virtual Private Network
-          .dashboard__box-body
+          .dashboard__box-body.is-5
             ul
               li
                 a.green(href="#") 60
                 a(href="#") VPCs
-              //li.empty
               li
                 a.orange(href="#") 169
                 a(href="#") Subnets
-              //li.empty
               li
                 a.orange(href="#") 114
                 a(href="#") Route Tables
-              //li.empty
               li
                 a.green(href="#") 201
                 a(href="#")!= "DHCP <br>OptionSets"
-              //li.empty
               li
                 span.refresh
                   i.icon-font.icon-refresh
@@ -76,45 +70,40 @@
         .dashboard__box
           .dashboard__box-header
             p Transit Network
-          .dashboard__box-body
+          .dashboard__box-body.is-3
             ul
               li
                 a.green(href="#") 60
                 a(href="#")!= "Transit <br>Gateway"
-              //li.empty
               li
                 a.orange(href="#") 169
                 a(href="#")!= "TGW <br>RouteTables"
-              //li.empty
               li
                 a.red(href="#") 114
                 a(href="#")!= "TGW <br>Attachments"
         .dashboard__box
           .dashboard__box-header
             p Hybrid Network
-          .dashboard__box-body
+          .dashboard__box-body.is-3
             ul
               li
                 a.green(href="#") 4
                 a(href="#")!= "VPN <br>Connections"
-              //li.empty
               li
                 span.refresh
                   i.icon-font.icon-refresh
                 a(href="#")!= "DCX <br>Connections"
-              //li.empty
               li
                 a.red(href="#") 1
                 a(href="#") DGWs
         .dashboard__box
           .dashboard__box-header
             p Traffic Mirroring
-          .dashboard__box-body
+          .dashboard__box-body.is-2
             ul
               li
                 a.green(href="#") 34
                 a(href="#")!= "Mirror <br>Targets"
-              //li.empty
               li
                 a.green(href="#") 12
                 a(href="#")!= "Resource <br>Shares"
@@ -130,20 +119,18 @@
         .dashboard__box
           .dashboard__box-header
             p Compliance Mgmt.
-          .dashboard__box-body
+          .dashboard__box-body.is-3
             ul
               li
                 a.green(href="#") 7
                 a(href="#")!= "SecHub <br>Members"
-              //li.empty
               li
                 a.orange(href="#") 9
                 a(href="#")!= "SecHub <br>Standards"
-              //li.empty
               li
                 a.orange(href="#") 6
                 a(href="#")!= "SecHub <br>Integrations"
-        .dashboard__box
+        .dashboard__box.dashboard__box--half
           .dashboard__box-header
             p Threat Detection
           .dashboard__box-body
@@ -151,7 +138,7 @@
               li
                 a.green(href="#") 10
                 a(href="#")!= "GuardDuty <br>Members"
-        .dashboard__box
+        .dashboard__box.dashboard__box--half
           .dashboard__box-header
             p Secrets Mgmt.
           .dashboard__box-body
@@ -162,17 +149,15 @@
         .dashboard__box
           .dashboard__box-header
             p Perimeter Protection
-          .dashboard__box-body
+          .dashboard__box-body.is-3
             ul
               li
                 a.green(href="#") 4
                 a(href="#")!= "FMS <br>Policies"
-              //li.empty
               li
                 span.refresh
                   i.icon-font.icon-refresh
                 a(href="#")!= "FMS <br>AppLists"
-              //li.empty
               li
                 a.red(href="#") 1
                 a(href="#")!= "FMS <br>Protocol List"
@@ -197,18 +182,16 @@
         .dashboard__box
           .dashboard__box-header
             p Private DNS
-          .dashboard__box-body
+          .dashboard__box-body.is-3
             ul
               li
                 span.refresh
                   i.icon-font.icon-refresh
                 a(href="#")!= "Inbound <br>Endpoints"
-              //li.empty
               li
                 span.refresh
                   i.icon-font.icon-refresh
                 a(href="#")!= "Outbound <br>Endpoints"
-              //li.empty
               li
                 span.refresh
                   i.icon-font.icon-refresh
@@ -216,37 +199,32 @@
         .dashboard__box
           .dashboard__box-header
             p Image Management
-          .dashboard__box-body
+          .dashboard__box-body.is-4
             ul
               li
                 a.green(href="#") 24
                 a(href="#") Components
-              //li.empty
               li
                 a.orange(href="#") 2
                 a(href="#") Recipes
-              //li.empty
               li
                 a.orange(href="#") 2
                 a(href="#") Pipelines
-              //li.empty
               li
                 a.green(href="#") 2
                 a(href="#") Images
         .dashboard__box
           .dashboard__box-header
             p Patch Management
-          .dashboard__box-body
+          .dashboard__box-body.is-3
             ul
               li
                 a.green(href="#") 4
                 a(href="#") Baselines
-              //li.empty
               li
                 span.refresh
                   i.icon-font.icon-refresh
                 a(href="#") Patch Groups
-              //li.empty
               li
                 a.red(href="#") 20
                 a(href="#")!= "Maintenance <br>Windows"
@@ -271,28 +249,25 @@
         .dashboard__box
           .dashboard__box-header
             p Organization Policies
-          .dashboard__box-body
+          .dashboard__box-body.is-3
             ul
               li
                 a.green(href="#") 60
                 a(href="#") SCPs
-              //li.empty
               li
                 a.orange(href="#") 169
                 a(href="#") Tag Policies
-              //li.empty
               li
                 a.orange(href="#") 114
                 a(href="#") Backup Policies
         .dashboard__box
           .dashboard__box-header
             p Config
-          .dashboard__box-body
+          .dashboard__box-body.is-2
             ul
               li
                 a.green(href="#") 128
                 a(href="#") Recorders
-              //li.empty
               li
                 a.orange(href="#") 990
                 a(href="#") Rules
@@ -308,12 +283,11 @@
         .dashboard__box
           .dashboard__box-header
             p Service Catalog
-          .dashboard__box-body
+          .dashboard__box-body.is-2
             ul
               li
                 a.green(href="#") 2
                 a(href="#") Portfolios
-              //li.empty
               li
                 a.orange(href="#") 8
                 a(href="#") Products
@@ -326,7 +300,7 @@
           span.refresh
             i.icon-font.icon-refresh
       .dashboard__block-body
-        .dashboard__box
+        .dashboard__box.dashboard__box--half
           .dashboard__box-header
             p CloudWatch
           .dashboard__box-body
@@ -335,7 +309,7 @@
                 span.refresh
                   i.icon-font.icon-refresh
                 a(href="#") Events
-        .dashboard__box
+        .dashboard__box.dashboard__box--half
           .dashboard__box-header
             p Centralized Logging
           .dashboard__box-body
@@ -347,18 +321,16 @@
         .dashboard__box
           .dashboard__box-header
             p Log Analytics
-          .dashboard__box-body
+          .dashboard__box-body.is-3
             ul
               li
                 span.refresh
                   i.icon-font.icon-refresh
                 a(href="#")!= "Firehose <br>Delivery Streams"
-              //li.empty
               li
                 span.refresh
                   i.icon-font.icon-refresh
                 a(href="#") ALBs
-              //li.empty
               li
                 span.refresh
                   i.icon-font.icon-refresh
@@ -375,24 +347,20 @@
         .dashboard__box
           .dashboard__box-header
             p Backup
-          .dashboard__box-body
+          .dashboard__box-body.is-5
             ul
               li
                 a.green(href="#") 24
                 a(href="#") Policies
-              //li.empty
               li
                 a.orange(href="#") 2
                 a(href="#") Vaults
-              //li.empty
               li
                 a.orange(href="#") 2
                 a(href="#") Plans
-              //li.empty
               li
                 a.green(href="#") 2
                 a(href="#") Backup Jobs
-              //li.empty
               li
                 a.green(href="#") 2
                 a(href="#") Copy Jobs
@@ -408,12 +376,11 @@
         .dashboard__box
           .dashboard__box-header
             p Key Management
-          .dashboard__box-body
+          .dashboard__box-body.is-2
             ul
               li
                 a.gold(href="#") 4
                 a(href="#") Key Stores
-              //li.empty
               li
                 span.refresh
                   i.icon-font.icon-refresh

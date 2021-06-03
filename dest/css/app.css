@@ -1272,7 +1272,7 @@ picture {
 @media screen and (max-width: 767px) {
   /* line 1, src/scss/_components/dashboard/_dashboard--header.scss */
   .dashboard__header {
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding-bottom: 20px;
   }
 }
@@ -1295,14 +1295,6 @@ picture {
     left: 20px;
     width: -webkit-calc(100% - 40px);
     width: calc(100% - 40px);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  /* line 20, src/scss/_components/dashboard/_dashboard--header.scss */
-  .dashboard__header:after {
-    left: 0;
-    width: 100%;
   }
 }
 
@@ -2558,7 +2550,44 @@ picture {
   padding-top: 15px;
 }
 
-/* line 9, src/scss/_components/dashboard/_dashboard--box.scss */
+@media screen and (max-width: 767px) {
+  /* line 1, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  /* line 9, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box.dashboard__box--half {
+    width: -webkit-calc((100% - 10px) / 2);
+    width: calc((100% - 10px) / 2);
+    margin-right: 0 !important;
+  }
+  /* line 13, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box.dashboard__box--half + .dashboard__box--half {
+    margin-left: 10px;
+  }
+  /* line 17, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box.dashboard__box--half .dashboard__box-body {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 21, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box.dashboard__box--half .dashboard__box-body ul {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /* line 24, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box.dashboard__box--half .dashboard__box-body ul li {
+    width: 100%;
+  }
+}
+
+/* line 32, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2576,14 +2605,14 @@ picture {
   text-align: center;
 }
 
-/* line 16, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 39, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-header p {
   font-weight: 600;
   font-size: 13px;
   color: #4097D9;
 }
 
-/* line 23, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 46, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2597,7 +2626,64 @@ picture {
           border-radius: 10px;
 }
 
-/* line 31, src/scss/_components/dashboard/_dashboard--box.scss */
+@media screen and (max-width: 767px) {
+  /* line 46, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body {
+    -webkit-box-flex: unset;
+    -webkit-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+  /* line 56, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-2 {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 61, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-2 ul {
+    width: 100%;
+  }
+  /* line 64, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-2 ul li {
+    width: 50%;
+    margin-right: 0 !important;
+  }
+  /* line 68, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-2 ul li:after {
+    right: 0 !important;
+  }
+  /* line 74, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-3, .dashboard__box-body.is-4, .dashboard__box-body.is-5 {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 81, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-3 ul, .dashboard__box-body.is-4 ul, .dashboard__box-body.is-5 ul {
+    width: 100%;
+  }
+  /* line 84, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-3 ul li, .dashboard__box-body.is-4 ul li, .dashboard__box-body.is-5 ul li {
+    width: -webkit-calc(100% / 3);
+    width: calc(100% / 3);
+    margin-right: 0 !important;
+  }
+  /* line 88, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-3 ul li:nth-of-type(4), .dashboard__box-body.is-3 ul li:nth-of-type(5), .dashboard__box-body.is-3 ul li:nth-of-type(6), .dashboard__box-body.is-4 ul li:nth-of-type(4), .dashboard__box-body.is-4 ul li:nth-of-type(5), .dashboard__box-body.is-4 ul li:nth-of-type(6), .dashboard__box-body.is-5 ul li:nth-of-type(4), .dashboard__box-body.is-5 ul li:nth-of-type(5), .dashboard__box-body.is-5 ul li:nth-of-type(6) {
+    margin-top: 10px;
+  }
+  /* line 95, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-3 ul li:nth-of-type(3):after, .dashboard__box-body.is-4 ul li:nth-of-type(3):after, .dashboard__box-body.is-5 ul li:nth-of-type(3):after {
+    display: none;
+  }
+  /* line 100, src/scss/_components/dashboard/_dashboard--box.scss */
+  .dashboard__box-body.is-3 ul li:after, .dashboard__box-body.is-4 ul li:after, .dashboard__box-body.is-5 ul li:after {
+    right: 0 !important;
+  }
+}
+
+/* line 108, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2610,7 +2696,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 31, src/scss/_components/dashboard/_dashboard--box.scss */
+  /* line 108, src/scss/_components/dashboard/_dashboard--box.scss */
   .dashboard__box-body ul {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -2618,7 +2704,7 @@ picture {
   }
 }
 
-/* line 41, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 115, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li {
   position: relative;
   display: -webkit-box;
@@ -2637,12 +2723,12 @@ picture {
   min-width: 70px;
 }
 
-/* line 65, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 122, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li:not(:last-of-type) {
   margin-right: 40px;
 }
 
-/* line 71, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 125, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li:not(:last-of-type):after {
   content: '';
   position: absolute;
@@ -2653,7 +2739,7 @@ picture {
   background-color: rgba(18, 30, 49, 0.1);
 }
 
-/* line 82, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 136, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a {
   position: relative;
   display: -webkit-box;
@@ -2670,7 +2756,7 @@ picture {
   text-align: center;
 }
 
-/* line 91, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 145, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a:nth-of-type(2) {
   font-weight: bold;
   font-size: 12px;
@@ -2678,7 +2764,7 @@ picture {
   color: #33325C;
 }
 
-/* line 98, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 152, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a:after {
   content: '';
   opacity: 0;
@@ -2693,7 +2779,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 110, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 164, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a:hover:after {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -2701,47 +2787,47 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 116, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 170, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.green {
   color: #00B94F;
 }
 
-/* line 119, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 173, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.green:after {
   background-color: #00B94F;
 }
 
-/* line 123, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 177, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.gold {
   color: #CB9B29;
 }
 
-/* line 126, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 180, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.gold:after {
   background-color: #CB9B29;
 }
 
-/* line 130, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 184, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.red {
   color: #C14F45;
 }
 
-/* line 133, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 187, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.red:after {
   background-color: #C14F45;
 }
 
-/* line 137, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 191, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.orange {
   color: #F7C142;
 }
 
-/* line 140, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 194, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li a.orange:after {
   background-color: #F7C142;
 }
 
-/* line 146, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 200, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2762,7 +2848,7 @@ picture {
   margin-bottom: 9px;
 }
 
-/* line 155, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 209, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span + a {
   position: relative;
   display: -webkit-box;
@@ -2784,17 +2870,17 @@ picture {
   color: #33325C;
 }
 
-/* line 167, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 221, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.success {
   background-color: #00b94f;
 }
 
-/* line 170, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 224, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.refresh {
   background-color: #4097d9;
 }
 
-/* line 173, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 227, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.refresh .icon-font {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -2808,23 +2894,23 @@ picture {
           animation-name: rotate;
 }
 
-/* line 181, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 235, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span.decline {
   background-color: #ed6459;
 }
 
-/* line 185, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 239, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font {
   font-size: 14px;
   color: #ffffff;
 }
 
-/* line 189, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 243, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font.icon-checked {
   font-size: 9px;
 }
 
-/* line 192, src/scss/_components/dashboard/_dashboard--box.scss */
+/* line 246, src/scss/_components/dashboard/_dashboard--box.scss */
 .dashboard__box-body ul li span .icon-font.icon-close {
   font-size: 10px;
 }
