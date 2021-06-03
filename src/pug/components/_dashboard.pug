@@ -2,11 +2,12 @@
 
 section#dashboard.dashboard
 
+  include _dashboard-sidebar
+  include _dashboard-header
+  include _dashboard-subheader
+
   .dashboard__wrapper
 
-    include _dashboard-sidebar
-    include _dashboard-header
-    include _dashboard-subheader
     include _dashboard--blockBox
 
     section#overlay.overlay

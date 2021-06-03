@@ -50,7 +50,7 @@
 				.find('.dashboard__sidebar-circle')
 				.addClass('is-open');
 			
-			$('[hamburger-js]').trigger('click');
+			$('.dashboard__sidebar [hamburger-js]').trigger('click');
 		});
 	};
 	
@@ -117,23 +117,33 @@
 
 function helperCalcScrollNodeHeight() {
 	$('.dashboard__wrapper').css({
-		'minHeight': 'calc(100vh - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
-		'maxHeight': 'calc(100vh - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
+		'height': 'calc(' + window.innerHeight + 'px - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
+		'minHeight': 'calc(' + window.innerHeight + 'px - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
+		'maxHeight': 'calc(' + window.innerHeight + 'px - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
 		'marginTop': Number($('.dashboard__header').outerHeight(true)),
+	});
+	$('html, body').css({
+		'height': window.innerHeight,
+		'minHeight': window.innerHeight,
+		'maxHeight': window.innerHeight
 	});
 }
 
 $(window).on('load', () => {
-	helperCalcScrollNodeHeight();
+	setTimeout(() => {
+		helperCalcScrollNodeHeight();
+	}, 150);
 	
-	OverlayScrollbars($(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container"), {
-		className : "os-theme-dark",
-		autoUpdate: true,
-		overflowBehavior: {
-			x : "hidden",
-			y : "scroll"
-		}
-	});
+	setTimeout(() => {
+		OverlayScrollbars($(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container"), {
+			className : "os-theme-dark",
+			autoUpdate: true,
+			overflowBehavior: {
+				x : "hidden",
+				y : "scroll"
+			}
+		});
+	}, 300);
 });
 
 $(window).on('resize', () => {
