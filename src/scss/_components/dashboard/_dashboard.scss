@@ -12,7 +12,7 @@
 		margin-top: 230px;
 		padding-top: 20px;
 		padding-left: 100px;
-		padding-right: 20px;
+		padding-right: 30px;
 		@include adaptive(1279) {
 			min-height: calc(100vh - 240px);
 			max-height: calc(100vh - 240px);
@@ -29,6 +29,14 @@
 			min-height: calc(100vh - 310px);
 			max-height: calc(100vh - 310px);
 			margin-top: 310px;
+			padding-right: 20px;
+		}
+
+		.os-scrollbar-vertical {
+			right: 15px;
+			@include adaptive(767) {
+				right: 0;
+			}
 		}
 	}
 
@@ -191,6 +199,9 @@
 
 			&:not(:first-of-type) {
 				margin-left: 30px;
+				@include adaptive(767) {
+					margin-left: 0;
+				}
 			}
 
 			&.is-disabled {

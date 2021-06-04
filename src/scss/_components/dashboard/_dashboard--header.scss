@@ -21,8 +21,8 @@
 		content: '';
 		position: absolute;
 		bottom: 0;
-		left: 110px;
-		width: calc(100% - 140px);
+		left: 100px;
+		width: calc(100% - 120px);
 		height: 1px;
 		background-color: rgba(#121E31, 0.1);
 		@include adaptive(1279) {
@@ -149,6 +149,17 @@
 			display: flex;
 			align-items: center;
 			height: 100%;
+			@include adaptive(767) {
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+
+				&:last-of-type {
+					flex: unset;
+					width: 100%;
+					max-width: 55px;
+				}
+			}
 
 			&:not(:last-of-type) {
 				padding-right: 20px;
@@ -200,6 +211,9 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		@include adaptive(767) {
+			width: 100%;
+		}
 
 		.os-scrollbar-track {
 			background-color: rgba(#121E31, 0.1) !important;
@@ -236,7 +250,12 @@
 				font-weight: 600;
 				font-size: 14px;
 				@include adaptive(767) {
+					min-width: unset;
+					max-width: 80px;
 					font-size: 12px;
+				}
+				@include adaptive(374) {
+					max-width: 100%;
 				}
 			}
 
