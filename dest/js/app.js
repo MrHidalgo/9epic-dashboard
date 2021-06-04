@@ -34,7 +34,7 @@ var initHamburger = function initHamburger() {
 				var elem = ev.currentTarget;
 
 				if ($(elem).closest('.dashboard__subheader').length > 0) {
-					$('.dashboard__sidebar .hamburger').addClass('is-active');
+					$('.leftHandMenu__sidebar .hamburger').addClass('is-active');
 
 					if ($(window).width() < 1279) {
 						$('#overlay').fadeIn(500);
@@ -45,11 +45,11 @@ var initHamburger = function initHamburger() {
 					elem.classList.remove("is-active");
 					mobileContainer.classList.remove("is-open");
 
-					$('.dashboard__sidebar-btn').hide();
-					$('.dashboard__sidebar .dashboard__logo').hide();
+					$('.leftHandMenu__sidebar-btn').hide();
+					$('.leftHandMenu__sidebar .dashboard__logo').hide();
 
-					$('.dashboard__sidebar-btn').removeClass('is-active');
-					$('.dashboard__sidebar-collapse-body').slideUp(350);
+					$('.leftHandMenu__sidebar-btn').removeClass('is-active');
+					$('.leftHandMenu__sidebar-collapse-body').slideUp(350);
 
 					$('.dashboard__subheader .hamburger').removeClass('is-active');
 
@@ -59,8 +59,8 @@ var initHamburger = function initHamburger() {
 					mobileContainer.classList.add("is-open");
 
 					setTimeout(function () {
-						$('.dashboard__sidebar-btn').fadeIn(500);
-						$('.dashboard__sidebar .dashboard__logo').fadeIn(500);
+						$('.leftHandMenu__sidebar-btn').fadeIn(500);
+						$('.leftHandMenu__sidebar .dashboard__logo').fadeIn(500);
 					}, 250);
 				}
 			});
@@ -95,38 +95,38 @@ var initPreventBehavior = function initPreventBehavior() {
  * CALLBACK :: start
  * ============================================= */
 	var sidebarCB = function sidebarCB() {
-		$('.dashboard__sidebar-circle').on('click', function (ev) {
+		$('.leftHandMenu__sidebar-circle').on('click', function (ev) {
 			if (!$('[hamburger-js]').hasClass('is-active')) {
 				$('[hamburger-js]').trigger('click');
-				$(ev.currentTarget).closest('.dashboard__sidebar-collapse-cover').find('.dashboard__sidebar-btn').trigger('click');
+				$(ev.currentTarget).closest('.leftHandMenu__sidebar-collapse-cover').find('.leftHandMenu__sidebar-btn').trigger('click');
 			} else {
-				$(ev.currentTarget).closest('.dashboard__sidebar-collapse-cover').find('.dashboard__sidebar-btn').trigger('click');
+				$(ev.currentTarget).closest('.leftHandMenu__sidebar-collapse-cover').find('.leftHandMenu__sidebar-btn').trigger('click');
 			}
 		});
 
-		$('.dashboard__sidebar-btn').on('click', function (ev) {
+		$('.leftHandMenu__sidebar-btn').on('click', function (ev) {
 			if ($(ev.currentTarget).hasClass('is-active')) {
 				$(ev.currentTarget).removeClass('is-active');
 
-				$(ev.currentTarget).closest('.dashboard__sidebar-collapse-head').siblings('.dashboard__sidebar-collapse-body').slideUp(350);
+				$(ev.currentTarget).closest('.leftHandMenu__sidebar-collapse-head').siblings('.leftHandMenu__sidebar-collapse-body').slideUp(350);
 			} else {
-				$('.dashboard__sidebar-btn').removeClass('is-active');
+				$('.leftHandMenu__sidebar-btn').removeClass('is-active');
 				$(ev.currentTarget).addClass('is-active');
 
-				$('.dashboard__sidebar-collapse-body').slideUp(350);
-				$(ev.currentTarget).closest('.dashboard__sidebar-collapse-head').siblings('.dashboard__sidebar-collapse-body').slideDown(350);
+				$('.leftHandMenu__sidebar-collapse-body').slideUp(350);
+				$(ev.currentTarget).closest('.leftHandMenu__sidebar-collapse-head').siblings('.leftHandMenu__sidebar-collapse-body').slideDown(350);
 			}
 		});
 
-		$('.dashboard__sidebar-collapse-body a').on('click', function (ev) {
-			$('.dashboard__sidebar-collapse-body a').removeClass('is-active');
+		$('.leftHandMenu__sidebar-collapse-body a').on('click', function (ev) {
+			$('.leftHandMenu__sidebar-collapse-body a').removeClass('is-active');
 			$(ev.currentTarget).addClass('is-active');
 
-			$('.dashboard__sidebar-circle').removeClass('is-open');
+			$('.leftHandMenu__sidebar-circle').removeClass('is-open');
 
-			$(ev.currentTarget).closest('.dashboard__sidebar-collapse-cover').find('.dashboard__sidebar-circle').addClass('is-open');
+			$(ev.currentTarget).closest('.leftHandMenu__sidebar-collapse-cover').find('.leftHandMenu__sidebar-circle').addClass('is-open');
 
-			$('.dashboard__sidebar [hamburger-js]').trigger('click');
+			$('.leftHandMenu__sidebar [hamburger-js]').trigger('click');
 		});
 	};
 
@@ -167,7 +167,7 @@ var initPreventBehavior = function initPreventBehavior() {
 		// ==========================================
 
 		$('body').on('click', function (e) {
-			var className = ".dashboard__header-dropdown, .dashboard__sidebar, .dashboard__subheader .hamburger";
+			var className = ".dashboard__header-dropdown, .leftHandMenu__sidebar, .dashboard__subheader .hamburger";
 
 			if (!$(e.target).closest(className).length) {
 				$('.dashboard__header-dropdown-toggle').removeClass('is-active');
@@ -177,9 +177,9 @@ var initPreventBehavior = function initPreventBehavior() {
 				$('[hamburger-js]').removeClass("is-active");
 				$('[menu-js]').removeClass("is-open");
 
-				$('.dashboard__sidebar-btn').hide().removeClass('is-active');
-				$('.dashboard__sidebar .dashboard__logo').hide();
-				$('.dashboard__sidebar-collapse-body').slideUp(350);
+				$('.leftHandMenu__sidebar-btn').hide().removeClass('is-active');
+				$('.leftHandMenu__sidebar .dashboard__logo').hide();
+				$('.leftHandMenu__sidebar-collapse-body').slideUp(350);
 
 				$('#overlay').fadeOut(500);
 			}
@@ -196,6 +196,7 @@ function helperCalcScrollNodeHeight() {
 		'maxHeight': 'calc(' + window.innerHeight + 'px - ' + Number($('.dashboard__header').outerHeight(true)) + 'px)',
 		'marginTop': Number($('.dashboard__header').outerHeight(true))
 	});
+
 	$('html, body').css({
 		'height': window.innerHeight,
 		'minHeight': window.innerHeight,
@@ -209,7 +210,7 @@ $(window).on('load', function () {
 	}, 150);
 
 	setTimeout(function () {
-		OverlayScrollbars($(".dashboard__wrapper, .dashboard__sidebar-bottom, .dashboard__header-dropdown-container"), {
+		OverlayScrollbars($(".dashboard__wrapper, .leftHandMenu__sidebar-bottom, .dashboard__header-dropdown-container"), {
 			className: "os-theme-dark",
 			autoUpdate: true,
 			overflowBehavior: {

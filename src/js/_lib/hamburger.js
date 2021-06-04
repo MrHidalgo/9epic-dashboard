@@ -21,7 +21,7 @@ const initHamburger = () => {
 				const elem = ev.currentTarget;
 				
 				if($(elem).closest('.dashboard__subheader').length > 0) {
-					$('.dashboard__sidebar .hamburger').addClass('is-active');
+					$('.leftHandMenu__sidebar .hamburger').addClass('is-active');
 					
 					if($(window).width() < 1279) {
 						$('#overlay').fadeIn(500);
@@ -32,11 +32,11 @@ const initHamburger = () => {
 					elem.classList.remove("is-active");
 					mobileContainer.classList.remove("is-open");
 					
-					$('.dashboard__sidebar-btn').hide();
-					$('.dashboard__sidebar .dashboard__logo').hide();
+					$('.leftHandMenu__sidebar-btn').hide();
+					$('.leftHandMenu__sidebar .dashboard__logo').hide();
 					
-					$('.dashboard__sidebar-btn').removeClass('is-active');
-					$('.dashboard__sidebar-collapse-body').slideUp(350);
+					$('.leftHandMenu__sidebar-btn').removeClass('is-active');
+					$('.leftHandMenu__sidebar-collapse-body').slideUp(350);
 					
 					$('.dashboard__subheader .hamburger').removeClass('is-active');
 					
@@ -46,8 +46,8 @@ const initHamburger = () => {
 					mobileContainer.classList.add("is-open");
 
 					setTimeout(() => {
-						$('.dashboard__sidebar-btn').fadeIn(500);
-						$('.dashboard__sidebar .dashboard__logo').fadeIn(500);
+						$('.leftHandMenu__sidebar-btn').fadeIn(500);
+						$('.leftHandMenu__sidebar .dashboard__logo').fadeIn(500);
 					}, 250);
 				}
 				
