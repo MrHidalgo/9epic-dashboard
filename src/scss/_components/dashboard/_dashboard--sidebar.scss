@@ -138,6 +138,9 @@
 				@include adaptive(1439) {
 					padding-bottom: 10px;
 				}
+				@include respondCustom('(max-height: 665px)') {
+					padding-bottom: 5px;
+				}
 			}
 		}
 
