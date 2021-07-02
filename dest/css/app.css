@@ -1941,15 +1941,23 @@ picture {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
-  max-height: 100%;
+  max-height: -webkit-calc(100% - 15px);
+  max-height: calc(100% - 15px);
 }
 
-/* line 135, src/scss/_components/dashboard/_dashboard--sidebar.scss */
-.leftHandMenu__sidebar-collapse > div {
+/* line 136, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+.leftHandMenu__sidebar-collapse > div:not(:last-of-type) {
   padding-bottom: 20px;
 }
 
-/* line 139, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+@media screen and (max-width: 1439px) {
+  /* line 136, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+  .leftHandMenu__sidebar-collapse > div:not(:last-of-type) {
+    padding-bottom: 10px;
+  }
+}
+
+/* line 144, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-collapse-head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1961,19 +1969,19 @@ picture {
           align-items: center;
 }
 
-/* line 144, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 149, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-collapse-head > div:nth-of-type(1) {
   width: 50px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 144, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+  /* line 149, src/scss/_components/dashboard/_dashboard--sidebar.scss */
   .leftHandMenu__sidebar-collapse-head > div:nth-of-type(1) {
     width: 35px;
   }
 }
 
-/* line 150, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 155, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-collapse-head > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1988,13 +1996,13 @@ picture {
   padding-left: 20px;
 }
 
-/* line 160, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 165, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-collapse-body {
   display: none;
   padding-left: 70px;
 }
 
-/* line 164, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 169, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-collapse-body > div {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -2004,13 +2012,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 164, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+  /* line 169, src/scss/_components/dashboard/_dashboard--sidebar.scss */
   .leftHandMenu__sidebar-collapse-body > div {
     padding-top: 5px;
   }
 }
 
-/* line 171, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 176, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-collapse-body a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2025,13 +2033,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 171, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+  /* line 176, src/scss/_components/dashboard/_dashboard--sidebar.scss */
   .leftHandMenu__sidebar-collapse-body a {
     font-size: 12px;
   }
 }
 
-/* line 181, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 186, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-collapse-body a.is-active, .leftHandMenu__sidebar-collapse-body a:hover {
   color: #ffffff;
   -webkit-transition: color 0.3s ease-in-out;
@@ -2039,12 +2047,12 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 187, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 192, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-collapse-body a:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
-/* line 194, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 199, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-circle {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2070,14 +2078,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 194, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+  /* line 199, src/scss/_components/dashboard/_dashboard--sidebar.scss */
   .leftHandMenu__sidebar-circle {
     width: 35px;
     height: 35px;
   }
 }
 
-/* line 209, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 214, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-circle.is-open, .leftHandMenu__sidebar-circle:hover {
   background-color: #ffffff;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -2085,7 +2093,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 214, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 219, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-circle.is-open .icon-font, .leftHandMenu__sidebar-circle:hover .icon-font {
   color: #4097d9;
   -webkit-transition: color 0.3s ease-in-out;
@@ -2093,7 +2101,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 220, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 225, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-circle .icon-font {
   color: #ffffff;
   font-size: 20px;
@@ -2103,25 +2111,25 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 220, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+  /* line 225, src/scss/_components/dashboard/_dashboard--sidebar.scss */
   .leftHandMenu__sidebar-circle .icon-font {
     font-size: 14px;
   }
 }
 
-/* line 228, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 233, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-circle .icon-font.icon-account-framework, .leftHandMenu__sidebar-circle .icon-font.icon-identity-access, .leftHandMenu__sidebar-circle .icon-font.icon-monitoring, .leftHandMenu__sidebar-circle .icon-font.icon-data-protection, .leftHandMenu__sidebar-circle .icon-font.icon-digital {
   font-size: 16px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 228, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+  /* line 233, src/scss/_components/dashboard/_dashboard--sidebar.scss */
   .leftHandMenu__sidebar-circle .icon-font.icon-account-framework, .leftHandMenu__sidebar-circle .icon-font.icon-identity-access, .leftHandMenu__sidebar-circle .icon-font.icon-monitoring, .leftHandMenu__sidebar-circle .icon-font.icon-data-protection, .leftHandMenu__sidebar-circle .icon-font.icon-digital {
     font-size: 12px;
   }
 }
 
-/* line 241, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 246, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-btn {
   position: relative;
   display: -webkit-box;
@@ -2130,7 +2138,7 @@ picture {
   display: flex;
 }
 
-/* line 247, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 252, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-btn:hover p:before, .leftHandMenu__sidebar-btn:hover p:after {
   width: 50%;
   -webkit-transition: width 0.3s ease-in-out;
@@ -2138,7 +2146,7 @@ picture {
   transition: width 0.3s ease-in-out;
 }
 
-/* line 255, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 260, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-btn p {
   white-space: nowrap;
   position: relative;
@@ -2148,13 +2156,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 255, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+  /* line 260, src/scss/_components/dashboard/_dashboard--sidebar.scss */
   .leftHandMenu__sidebar-btn p {
     font-size: 16px;
   }
 }
 
-/* line 265, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 270, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-btn p:before, .leftHandMenu__sidebar-btn p:after {
   content: '';
   position: absolute;
@@ -2167,17 +2175,17 @@ picture {
   transition: width 0.3s ease-in-out;
 }
 
-/* line 276, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 281, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-btn p:before {
   left: 50%;
 }
 
-/* line 279, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 284, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar-btn p:after {
   right: 50%;
 }
 
-/* line 285, src/scss/_components/dashboard/_dashboard--sidebar.scss */
+/* line 290, src/scss/_components/dashboard/_dashboard--sidebar.scss */
 .leftHandMenu__sidebar .os-scrollbar-handle {
   background-color: #FFFFFF !important;
 }
@@ -2628,13 +2636,13 @@ picture {
 }
 
 /* line 97, src/scss/_components/dashboard/_dashboard--block.scss */
-.validate-dashboard__block-body .dashboard__box:not(:last-of-type) {
+.validate-dashboard__block-body .validate-dashboard__box:not(:last-of-type) {
   margin-right: 10px;
 }
 
 @media screen and (max-width: 767px) {
   /* line 97, src/scss/_components/dashboard/_dashboard--block.scss */
-  .validate-dashboard__block-body .dashboard__box:not(:last-of-type) {
+  .validate-dashboard__block-body .validate-dashboard__box:not(:last-of-type) {
     margin-right: 0;
   }
 }
